@@ -39,14 +39,15 @@ public class CharacterMovement3D : MonoBehaviour
     {
         RaycastHit hit; 
         Vector2 mousePosition = mouseInput.Mouse.MousePosition.ReadValue<Vector2>();
-        Ray ray = Camera.main.ScreenPointToRay(mousePosition); 
+        Ray ray = mainCamera.ScreenPointToRay(mousePosition); 
         if ( Physics.Raycast (ray,out hit,1000.0f))
         {
-            destination = hit.point;
-            Debug.Log("You selected the " + hit.transform.name); // ensure you picked right object
+            if (hit.transform.gameObject.CompareTag("Floor"))
+            {
+                destination = hit.point;
+                navAgent.destination = destination;
+            }
         }
-        Debug.Log("Sending Raycast!");
-        navAgent.destination = destination;
     }
 
     private void Update()
