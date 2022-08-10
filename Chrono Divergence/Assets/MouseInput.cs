@@ -81,7 +81,7 @@ public partial class @MouseInput : IInputActionCollection2, IDisposable
                     ""id"": ""5b35a582-7599-40c8-bc20-6595026987fc"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
-                    ""interactions"": """",
+                    ""interactions"": ""Hold"",
                     ""initialStateCheck"": true
                 }
             ],

@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
@@ -9,6 +13,10 @@ public class CharacterMovementTopdown : MonoBehaviour
     private Camera mainCamera;
     public Tilemap collisionMap;
     [SerializeField] private Vector3 destination;
+    [SerializeField] private LayerMask layersToScan;
+    private Vector3 checkedOffset;
+
+    public float MoveSpeed => moveSpeed;
     
     private void Awake()
     {
@@ -27,37 +35,67 @@ public class CharacterMovementTopdown : MonoBehaviour
     
     private void Start()
     {
-        mouseInput.Keyboard.Move.performed += ctx => OnMovement(ctx);
         mainCamera = Camera.main;
         destination = transform.position;
     }
 
-    private void OnMovement(InputAction.CallbackContext ctx)
+    private void Update()
     {
-        Debug.Log("Test 1");
-        if (Vector2.Distance(transform.position, destination) < 0.1f)
+        Move();
+        if (Vector2.Distance(transform.position, destination) > 0.0001f)
         {
-            Debug.Log("Test 1");
-            Vector3 checkedOffset = GetDirectionOffset(ctx.ReadValue<Vector2>());
-            
-            if (Physics2D.OverlapBox(new Vector2(transform.position.x + checkedOffset.x, transform.position.y + checkedOffset.y), Vector2.one * 0.5f, 0))
-            {
-                Debug.Log("Place is not free!");
-                destination = transform.position;
-            }
-            else
-            {
-                Debug.Log("Place accepted");
-                destination = transform.position + checkedOffset;
-            }
+            transform.position = Vector3.MoveTowards(transform.position, destination, moveSpeed * Time.deltaTime);
         }
     }
 
-    private void Update()
+    private void Move()
     {
-        if (Vector2.Distance(transform.position, destination) > 0.1f)
+        checkedOffset = GetDirectionOffset(mouseInput.Keyboard.Move.ReadValue<Vector2>());
+        
+        if (Vector2.Distance(transform.position, destination) < 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, destination, moveSpeed * Time.deltaTime);
+            GameObject objectInFront = null;
+            int originalLayer = gameObject.layer;
+            gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+            if (Physics2D.OverlapBox(
+                new Vector2(transform.position.x + checkedOffset.x * 0.5f,
+                    transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0))
+            {
+                objectInFront = Physics2D
+                    .OverlapBox(
+                        new Vector2(transform.position.x + checkedOffset.x * 0.5f,
+                            transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0).gameObject;
+            }
+            gameObject.layer = originalLayer;
+            
+            if(objectInFront)
+            {
+                if (objectInFront != this.gameObject)
+                {
+                    Component[] tempMonoArray = objectInFront.GetComponents<Component>();
+                    List<IMovable> movableObject = objectInFront.GetInterfaces<IMovable>();
+                    if (movableObject.Count > 0)
+                    {
+                        if (movableObject[0].IsMovableInDirection(checkedOffset))
+                        {
+                            destination = new Vector3(transform.position.x + checkedOffset.x, transform.position.y + checkedOffset.y, transform.position.z).Round(0);
+                        }
+                        else
+                        {
+                            destination = transform.position.Round(0);
+                        }
+                    }
+                    else
+                    {
+                        destination = transform.position.Round(0);
+                    }
+                }
+            }
+            else
+            {
+                destination = new Vector3(transform.position.x + checkedOffset.x, transform.position.y + checkedOffset.y, transform.position.z);
+                destination = destination.Round(0);
+            }
         }
     }
 
