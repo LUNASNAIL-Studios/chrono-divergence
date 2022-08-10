@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using DefaultNamespace.Enums;
 using UnityEngine;
 
@@ -6,10 +7,10 @@ namespace DefaultNamespace
 {
     public class MovableBlock : MonoBehaviour, IMovable
     {
-        [SerializeField] private Vector2 destination;
-        private CharacterMovementTopdown player;
-        [SerializeField] private LayerMask layersToScan;
         [SerializeField] private int blockID;
+        [SerializeField] private LayerMask collisionLayers;
+        private Vector2 destination;
+        private CharacterMovementTopdown player;
 
         private void Start()
         {
@@ -56,7 +57,7 @@ namespace DefaultNamespace
                     objectInFront = Physics2D
                         .OverlapBox(
                             new Vector2(transform.position.x + direction.x * 0.5f,
-                                transform.position.y + direction.y * 0.5f), Vector2.one * 0.5f, 0, layersToScan).gameObject;
+                                transform.position.y + direction.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers).gameObject;
                 }
                 gameObject.layer = originalLayer;
             

@@ -13,7 +13,7 @@ public class CharacterMovementTopdown : MonoBehaviour
     private Camera mainCamera;
     public Tilemap collisionMap;
     [SerializeField] private Vector3 destination;
-    [SerializeField] private LayerMask layersToScan;
+    [SerializeField] private LayerMask collisionLayers;
     private Vector3 checkedOffset;
 
     public float MoveSpeed => moveSpeed;
@@ -59,12 +59,12 @@ public class CharacterMovementTopdown : MonoBehaviour
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             if (Physics2D.OverlapBox(
                 new Vector2(transform.position.x + checkedOffset.x * 0.5f,
-                    transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0))
+                    transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers))
             {
                 objectInFront = Physics2D
                     .OverlapBox(
                         new Vector2(transform.position.x + checkedOffset.x * 0.5f,
-                            transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0).gameObject;
+                            transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers).gameObject;
             }
             gameObject.layer = originalLayer;
             
