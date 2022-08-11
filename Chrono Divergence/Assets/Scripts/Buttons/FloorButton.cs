@@ -10,11 +10,11 @@ namespace DefaultNamespace
 
         [SerializeField] private bool isActivated;
         [SerializeField] private bool isActivatable;
+        [SerializeField] private string requiredBlockID = "";
         [SerializeField] private ActivatorTypes[] activatingThings;
         [SerializeField] private UnityEvent OnActivation;
         [SerializeField] private UnityEvent OnDeactivation;
-        [SerializeField] private int requiredBlockID = -1;
-        
+
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.GetInterfaces<IMovable>().Count > 0)
@@ -24,7 +24,7 @@ namespace DefaultNamespace
                 {
                     if (movableThing.GetActivatorType() == activatingType)
                     {
-                        if (requiredBlockID == -1 || movableThing.GetBlockID() == requiredBlockID)
+                        if (requiredBlockID == "" || movableThing.GetBlockID().Equals(requiredBlockID, StringComparison.CurrentCultureIgnoreCase))
                         {
                             ActivateButton();
                         }
@@ -77,7 +77,7 @@ namespace DefaultNamespace
             isActivatable = activatable;
         }
 
-        public int GetRequiredBlockID()
+        public string GetRequiredBlockID()
         {
             return requiredBlockID;
         }

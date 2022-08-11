@@ -7,9 +7,9 @@ namespace DefaultNamespace
     {
         int GetMovableDirections();
         BlockTypes GetBlockType();
-        bool IsMovableInDirection(Vector2 direction);
+        bool MoveInDirection(Vector2 direction);
         bool CanBePushedWithOthers();
         ActivatorTypes GetActivatorType();
-        int GetBlockID();
+        string GetBlockID();
     }
 }

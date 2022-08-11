@@ -10,8 +10,6 @@ public class CharacterMovementTopdown : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     private MouseInput mouseInput;
-    private Camera mainCamera;
-    public Tilemap collisionMap;
     [SerializeField] private Vector3 destination;
     [SerializeField] private LayerMask collisionLayers;
     private Vector3 checkedOffset;
@@ -35,7 +33,6 @@ public class CharacterMovementTopdown : MonoBehaviour
     
     private void Start()
     {
-        mainCamera = Camera.main;
         destination = transform.position;
     }
 
@@ -76,7 +73,7 @@ public class CharacterMovementTopdown : MonoBehaviour
                     List<IMovable> movableObject = objectInFront.GetInterfaces<IMovable>();
                     if (movableObject.Count > 0)
                     {
-                        if (movableObject[0].IsMovableInDirection(checkedOffset))
+                        if (movableObject[0].MoveInDirection(checkedOffset))
                         {
                             destination = new Vector3(transform.position.x + checkedOffset.x, transform.position.y + checkedOffset.y, transform.position.z).Round(0);
                         }

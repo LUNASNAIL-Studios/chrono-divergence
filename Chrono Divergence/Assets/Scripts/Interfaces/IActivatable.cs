@@ -8,7 +8,7 @@ namespace DefaultNamespace
         bool IsActivated();
         bool IsActivatable();
         void SetActivatable(bool activatable);
-        int GetRequiredBlockID();
+        string GetRequiredBlockID();
 
         ActivatorTypes[] GetActivatingTypes();
     }
