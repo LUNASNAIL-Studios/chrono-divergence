@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace
+﻿namespace ChronoDivergence
 {
     public interface IOpenable
     {

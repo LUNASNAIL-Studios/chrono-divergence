@@ -1,9 +1,8 @@
 ﻿using System;
-using DefaultNamespace.Enums;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace DefaultNamespace
+namespace ChronoDivergence
 {
     public class FloorButton : MonoBehaviour, IActivatable
     {

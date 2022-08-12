@@ -1,122 +1,162 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using DefaultNamespace;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.Tilemaps;
 
-public class CharacterMovementTopdown : MonoBehaviour
+namespace ChronoDivergence
 {
-    [SerializeField] private float moveSpeed;
-    private MouseInput mouseInput;
-    [SerializeField] private Vector3 destination;
-    [SerializeField] private LayerMask collisionLayers;
-    private Vector3 checkedOffset;
+    public class CharacterMovementTopdown : MonoBehaviour, IMovable
+    {
+        [SerializeField] private float moveSpeed;
+        private MouseInput mouseInput;
+        [SerializeField] private Vector2 destination;
+        [SerializeField] private LayerMask collisionLayers;
+        private bool canMoveByInput;
+        private Vector3 checkedOffset;
 
-    public float MoveSpeed => moveSpeed;
-    
-    private void Awake()
-    {
-        mouseInput = new MouseInput();
-    }
+        public float MoveSpeed => moveSpeed;
 
-    private void OnEnable()
-    {
-        mouseInput.Enable();
-    }
-
-    private void OnDisable()
-    {
-        mouseInput.Disable();
-    }
-    
-    private void Start()
-    {
-        destination = transform.position;
-    }
-
-    private void Update()
-    {
-        Move();
-        if (Vector2.Distance(transform.position, destination) > 0.0001f)
+        public bool CanMoveByInput
         {
-            transform.position = Vector3.MoveTowards(transform.position, destination, moveSpeed * Time.deltaTime);
+            get => canMoveByInput;
+            set => canMoveByInput = value;
         }
-    }
 
-    private void Move()
-    {
-        checkedOffset = GetDirectionOffset(mouseInput.Keyboard.Move.ReadValue<Vector2>());
-        
-        if (Vector2.Distance(transform.position, destination) < 0.1f)
+        private void Awake()
         {
+            mouseInput = new MouseInput();
+        }
+
+        private void OnEnable()
+        {
+            mouseInput.Enable();
+        }
+
+        private void OnDisable()
+        {
+            mouseInput.Disable();
+        }
+
+        private void Start()
+        {
+            destination = transform.position;
+        }
+
+        private void Update()
+        {
+            MoveByInput();
+            if (Vector2.Distance(transform.position, destination) > 0.0001f)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, destination, moveSpeed * Time.deltaTime);
+            }
+        }
+
+        private void MoveByInput()
+        {
+            if (Vector2.Distance(transform.position, destination) < 0.1f)
+            {
+                checkedOffset = GetDirectionOffset(mouseInput.Keyboard.Move.ReadValue<Vector2>());
+                Move();
+            }
+        }
+        
+        private bool MoveForced(Vector2 direction)
+        {
+            checkedOffset = direction;
+            return Move();
+        }
+
+        private bool Move()
+        {
+            Vector2 oldDestination = destination;
             GameObject objectInFront = null;
             int originalLayer = gameObject.layer;
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             if (Physics2D.OverlapBox(
-                new Vector2(transform.position.x + checkedOffset.x * 0.5f,
-                    transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers))
+                    new Vector2(transform.position.x + checkedOffset.x * 0.5f,
+                        transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers))
             {
                 objectInFront = Physics2D
                     .OverlapBox(
                         new Vector2(transform.position.x + checkedOffset.x * 0.5f,
-                            transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers).gameObject;
+                            transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers)
+                    .gameObject;
             }
             gameObject.layer = originalLayer;
-            
-            if(objectInFront)
+
+            if (objectInFront)
             {
-                if (objectInFront != this.gameObject)
+                Component[] tempMonoArray = objectInFront.GetComponents<Component>();
+                List<IMovable> movableObject = objectInFront.GetInterfaces<IMovable>();
+                if (movableObject.Count > 0)
                 {
-                    Component[] tempMonoArray = objectInFront.GetComponents<Component>();
-                    List<IMovable> movableObject = objectInFront.GetInterfaces<IMovable>();
-                    if (movableObject.Count > 0)
+                    if (movableObject[0].MoveInDirection(checkedOffset))
                     {
-                        if (movableObject[0].MoveInDirection(checkedOffset))
-                        {
-                            destination = new Vector3(transform.position.x + checkedOffset.x, transform.position.y + checkedOffset.y, transform.position.z).Round(0);
-                        }
-                        else
-                        {
-                            destination = transform.position.Round(0);
-                        }
-                    }
-                    else
-                    {
-                        destination = transform.position.Round(0);
+                        destination = new Vector3(oldDestination.x + checkedOffset.x,
+                            oldDestination.y + checkedOffset.y).Round(0);
+                        Debug.Log("True 1");
+                        return true;
                     }
                 }
+                return false;
+            }
+            destination = new Vector3(oldDestination.x + checkedOffset.x,
+                oldDestination.y + checkedOffset.y);
+            destination = destination.Round(0);
+            Debug.Log("True 2");
+            return true;
+        }
+
+        private Vector2 GetDirectionOffset(Vector2 vectorInput)
+        {
+            if (vectorInput == Vector2.right)
+            {
+                return new Vector2(1, 0);
+            }
+            else if (vectorInput == Vector2.left)
+            {
+                return new Vector2(-1, 0);
+            }
+            else if (vectorInput == Vector2.down)
+            {
+                return new Vector2(0, -1);
+            }
+            else if (vectorInput == Vector2.up)
+            {
+                return new Vector2(0, 1);
             }
             else
             {
-                destination = new Vector3(transform.position.x + checkedOffset.x, transform.position.y + checkedOffset.y, transform.position.z);
-                destination = destination.Round(0);
+                return Vector2.zero;
             }
         }
-    }
 
-    private Vector2 GetDirectionOffset(Vector2 vectorInput)
-    {
-        if (vectorInput == Vector2.right)
+        public int GetMovableDirections()
         {
-            return new Vector2(1, 0);
+            return 15;
         }
-        else if (vectorInput == Vector2.left)
+
+        public BlockTypes GetBlockType()
         {
-            return new Vector2(-1, 0);
+            return BlockTypes.PLAYER;
         }
-        else if (vectorInput == Vector2.down)
+
+        public bool MoveInDirection(Vector2 direction)
         {
-            return new Vector2(0, -1);
+            return MoveForced(direction);
         }
-        else if (vectorInput == Vector2.up)
+
+        public bool CanBePushedWithOthers()
         {
-            return new Vector2(0, 1);
+            return false;
         }
-        else
+
+        public ActivatorTypes GetActivatorType()
         {
-            return Vector2.zero;
+            return ActivatorTypes.PLAYER;
+        }
+
+        public string GetBlockID()
+        {
+            return "";
         }
     }
 }

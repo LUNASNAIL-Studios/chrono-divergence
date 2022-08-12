@@ -1,10 +1,7 @@
-﻿using System;
-using System.ComponentModel;
-using DefaultNamespace.Enums;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace ChronoDivergence
 {
     public class MovableBlock : MonoBehaviour, IMovable
     {
@@ -80,7 +77,7 @@ namespace DefaultNamespace
 
         public int GetMovableDirections()
         {
-            return 0;
+            return 15;
         }
 
         public BlockTypes GetBlockType()
@@ -105,52 +102,43 @@ namespace DefaultNamespace
 
         public bool MoveInDirection(Vector2 direction)
         {
-            if (Vector2.Distance(transform.position, destination) < 0.1f)
+            GameObject objectInFront = null;
+            int originalLayer = gameObject.layer;
+            gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
+            if (Physics2D.OverlapBox(
+                new Vector2(transform.position.x + direction.x * 0.5f,
+                    transform.position.y + direction.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers))
             {
-                GameObject objectInFront = null;
-                int originalLayer = gameObject.layer;
-                gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
-                if (Physics2D.OverlapBox(
-                    new Vector2(transform.position.x + direction.x * 0.5f,
-                        transform.position.y + direction.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers))
+                objectInFront = Physics2D
+                    .OverlapBox(
+                        new Vector2(transform.position.x + direction.x * 0.5f,
+                            transform.position.y + direction.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers).gameObject;
+            }
+            gameObject.layer = originalLayer;
+        
+            Debug.Log("Checking if Object is in front...");
+            if (objectInFront && objectInFront != this.gameObject)
+            {
+                Debug.Log("Object is in front: " + objectInFront.name);
+                IMovable movableBlock = objectInFront.GetComponent<IMovable>();
+                if (movableBlock != null)
                 {
-                    objectInFront = Physics2D
-                        .OverlapBox(
-                            new Vector2(transform.position.x + direction.x * 0.5f,
-                                transform.position.y + direction.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers).gameObject;
-                }
-                gameObject.layer = originalLayer;
-            
-                Debug.Log("Checking if Object is in front...");
-                if (objectInFront && objectInFront != this.gameObject)
-                {
-                    Debug.Log("Object is in front: " + objectInFront.name);
-                    IMovable movableBlock = objectInFront.GetComponent<IMovable>();
-                    if (movableBlock != null)
+                    if (movableBlock.CanBePushedWithOthers())
                     {
-                        if (movableBlock.CanBePushedWithOthers())
+                        if (movableBlock.MoveInDirection(direction))
                         {
-                            if (movableBlock.MoveInDirection(direction))
-                            {
-                                Move(direction);
-                                return true;
-                            }
-
-                            destination = transform.position;
-                            destination = destination.Round(0);
-                            return false;
+                            Move(direction);
+                            return true;
                         }
-
-                        destination = transform.position;
-                        destination = destination.Round(0);
                         return false;
                     }
+                    return false;
                 }
-                else
-                {
-                    Move(direction);
-                    return true;
-                }
+            }
+            else
+            {
+                Move(direction);
+                return true;
             }
 
             return false;
@@ -159,7 +147,7 @@ namespace DefaultNamespace
         private void Move(Vector2 direction)
         {
             destination =
-                new Vector2(transform.position.x + direction.x, transform.position.y + direction.y)
+                new Vector2(destination.x + direction.x, destination.y + direction.y)
                     .Round(0);
             destination = destination.Round(0);
             movesMade += 1;

@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace
+﻿namespace ChronoDivergence
 {
     public enum BlockTypes
     {
@@ -6,5 +6,6 @@
         MOVABLEBLOCK,
         ROTATEABLEBLOCK,
         CONVEYERBELT,
+        PLAYER,
     }
 }

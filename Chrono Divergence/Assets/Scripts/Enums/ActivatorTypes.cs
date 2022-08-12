@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace.Enums
+﻿namespace ChronoDivergence
 {
     public enum ActivatorTypes
     {

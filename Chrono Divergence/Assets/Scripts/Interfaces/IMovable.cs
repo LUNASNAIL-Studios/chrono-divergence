@@ -1,7 +1,6 @@
-﻿using DefaultNamespace.Enums;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace DefaultNamespace
+namespace ChronoDivergence
 {
     public interface IMovable
     {

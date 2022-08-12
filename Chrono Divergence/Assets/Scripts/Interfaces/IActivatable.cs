@@ -1,7 +1,4 @@
-﻿using DefaultNamespace.Enums;
-using UnityEngine;
-
-namespace DefaultNamespace
+﻿namespace ChronoDivergence
 {
     public interface IActivatable
     {

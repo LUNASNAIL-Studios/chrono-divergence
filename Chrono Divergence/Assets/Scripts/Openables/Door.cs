@@ -1,8 +1,6 @@
-﻿using System;
-using DefaultNamespace;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Openables
+namespace ChronoDivergence
 {
     public class Door : MonoBehaviour, IOpenable
     {
