@@ -66,42 +66,38 @@ namespace ChronoDivergence
 
         private bool Move()
         {
-            Vector2 oldDestination = destination;
             GameObject objectInFront = null;
             int originalLayer = gameObject.layer;
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             if (Physics2D.OverlapBox(
-                    new Vector2(transform.position.x + checkedOffset.x * 0.5f,
-                        transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers))
+                    new Vector2(destination.x + checkedOffset.x * 0.9f,
+                        destination.y + checkedOffset.y * 0.9f), Vector2.one * 0.9f, 0, collisionLayers))
             {
                 objectInFront = Physics2D
                     .OverlapBox(
-                        new Vector2(transform.position.x + checkedOffset.x * 0.5f,
-                            transform.position.y + checkedOffset.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers)
+                        new Vector2(destination.x + checkedOffset.x * 0.9f,
+                            destination.y + checkedOffset.y * 0.9f), Vector2.one * 0.9f, 0, collisionLayers)
                     .gameObject;
             }
             gameObject.layer = originalLayer;
 
             if (objectInFront)
             {
-                Component[] tempMonoArray = objectInFront.GetComponents<Component>();
                 List<IMovable> movableObject = objectInFront.GetInterfaces<IMovable>();
                 if (movableObject.Count > 0)
                 {
                     if (movableObject[0].MoveInDirection(checkedOffset))
                     {
-                        destination = new Vector3(oldDestination.x + checkedOffset.x,
-                            oldDestination.y + checkedOffset.y).Round(0);
-                        Debug.Log("True 1");
+                        destination = new Vector3(destination.x + checkedOffset.x,
+                            destination.y + checkedOffset.y).Round(0);
                         return true;
                     }
                 }
                 return false;
             }
-            destination = new Vector3(oldDestination.x + checkedOffset.x,
-                oldDestination.y + checkedOffset.y);
+            destination = new Vector3(destination.x + checkedOffset.x,
+                destination.y + checkedOffset.y);
             destination = destination.Round(0);
-            Debug.Log("True 2");
             return true;
         }
 

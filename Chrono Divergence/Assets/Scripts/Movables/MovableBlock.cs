@@ -106,13 +106,13 @@ namespace ChronoDivergence
             int originalLayer = gameObject.layer;
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             if (Physics2D.OverlapBox(
-                new Vector2(transform.position.x + direction.x * 0.5f,
-                    transform.position.y + direction.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers))
+                new Vector2(destination.x + direction.x * 0.9f,
+                    destination.y + direction.y * 0.9f), Vector2.one * 0.9f, 0, collisionLayers))
             {
                 objectInFront = Physics2D
                     .OverlapBox(
-                        new Vector2(transform.position.x + direction.x * 0.5f,
-                            transform.position.y + direction.y * 0.5f), Vector2.one * 0.5f, 0, collisionLayers).gameObject;
+                        new Vector2(destination.x + direction.x * 0.9f,
+                            destination.y + direction.y * 0.9f), Vector2.one * 0.9f, 0, collisionLayers).gameObject;
             }
             gameObject.layer = originalLayer;
         
