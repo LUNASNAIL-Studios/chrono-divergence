@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,6 +14,17 @@ namespace ChronoDivergence
         [SerializeField] private ActivatorTypes[] activatingThings;
         [SerializeField] private UnityEvent OnActivation;
         [SerializeField] private UnityEvent OnDeactivation;
+        [SerializeField] private TMP_Text idText;
+
+        private void Start()
+        {
+            idText.text = requiredBlockID;
+        }
+
+        private void OnValidate()
+        {
+            idText.text = requiredBlockID;
+        }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -23,9 +35,13 @@ namespace ChronoDivergence
                 {
                     if (movableThing.GetActivatorType() == activatingType)
                     {
-                        if (requiredBlockID == "" || movableThing.GetBlockID().Equals(requiredBlockID, StringComparison.CurrentCultureIgnoreCase))
+                        if (movableThing.isLoadedEnough())
                         {
-                            ActivateButton();
+                            if (requiredBlockID == "" || movableThing.GetBlockID()
+                                    .Equals(requiredBlockID, StringComparison.CurrentCultureIgnoreCase))
+                            {
+                                ActivateButton();
+                            }
                         }
                     }
                 }

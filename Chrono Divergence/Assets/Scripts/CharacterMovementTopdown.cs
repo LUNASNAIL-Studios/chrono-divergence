@@ -154,5 +154,10 @@ namespace ChronoDivergence
         {
             return "";
         }
+
+        public bool isLoadedEnough()
+        {
+            return true;
+        }
     }
 }

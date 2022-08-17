@@ -10,5 +10,6 @@ namespace ChronoDivergence
         bool CanBePushedWithOthers();
         ActivatorTypes GetActivatorType();
         string GetBlockID();
+        bool isLoadedEnough();
     }
 }

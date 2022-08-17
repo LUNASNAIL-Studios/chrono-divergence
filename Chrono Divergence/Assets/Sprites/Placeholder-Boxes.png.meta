@@ -132,11 +132,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
+        y: 768
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,11 +153,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 256
+        y: 768
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,12 +173,12 @@ TextureImporter:
       name: Placeholder-Boxes_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 512
+        y: 768
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,8 +194,29 @@ TextureImporter:
       name: Placeholder-Boxes_3
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def23ed6f55ac0c42823ffa7116eb8c2
+      internalID: 2040677565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Placeholder-Boxes_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
         width: 256
         height: 256
       alignment: 0
@@ -205,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: def23ed6f55ac0c42823ffa7116eb8c2
-      internalID: 2040677565
+      spriteID: 7e0e717ee1d19984a9ca74c3c480636b
+      internalID: -1089642125
       vertices: []
       indices: 
       edges: []
@@ -225,6 +246,7 @@ TextureImporter:
       Placeholder-Boxes_0: 2034556851
       Placeholder-Boxes_2: 771623677
       Placeholder-Boxes_1: -187411875
+      Placeholder-Boxes_4: -1089642125
       Placeholder-Boxes_3: 2040677565
   spritePackingTag: 
   pSDRemoveMatte: 0
