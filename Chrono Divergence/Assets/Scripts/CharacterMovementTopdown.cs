@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using ChronoDivergence.Events;
 using UnityEngine;
 
 namespace ChronoDivergence
@@ -67,6 +68,7 @@ namespace ChronoDivergence
         private bool Move()
         {
             GameObject objectInFront = null;
+            Vector2 oldDestination = destination;
             int originalLayer = gameObject.layer;
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             if (Physics2D.OverlapBox(
@@ -90,6 +92,7 @@ namespace ChronoDivergence
                     {
                         destination = new Vector3(destination.x + checkedOffset.x,
                             destination.y + checkedOffset.y).Round(0);
+                        Message.Raise(new PlayerMoveEvent(checkedOffset, destination, oldDestination));
                         return true;
                     }
                 }
@@ -98,6 +101,7 @@ namespace ChronoDivergence
             destination = new Vector3(destination.x + checkedOffset.x,
                 destination.y + checkedOffset.y);
             destination = destination.Round(0);
+            Message.Raise(new PlayerMoveEvent(checkedOffset, destination, oldDestination));
             return true;
         }
 
