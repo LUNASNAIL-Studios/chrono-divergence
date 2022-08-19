@@ -92,19 +92,19 @@ namespace ChronoDivergence
         {
             if (player.Destination == (Vector2)gameObject.transform.position)
             {
-                if (player.LookingDirection == direction)
-                {
+                //if (player.LookingDirection == direction)
+                //{
                     player.TargetedActivatable = this;
                     anim.SetBool("targeted", true);
-                }
-                else
-                {
-                    if ((Lever)player.TargetedActivatable == this)
-                    {
-                        player.TargetedActivatable = null;
-                        anim.SetBool("targeted", false);
-                    }
-                }
+                //}
+                //else
+                //{
+                //    if ((Lever)player.TargetedActivatable == this)
+                //    {
+                //        player.TargetedActivatable = null;
+                //        anim.SetBool("targeted", false);
+                //    }
+                //}
             }
             else
             {
