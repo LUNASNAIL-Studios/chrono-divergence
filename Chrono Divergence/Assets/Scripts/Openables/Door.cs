@@ -46,13 +46,13 @@ namespace ChronoDivergence
 
             if (allActive)
             {
-                isOpen = true;
-                anim.SetBool("IsOpen", true);
+                isOpen = !isInverted;
+                anim.SetBool("IsOpen", !isInverted);
             }
             else
             {
-                isOpen = false;
-                anim.SetBool("IsOpen", false);
+                isOpen = isInverted;
+                anim.SetBool("IsOpen", isInverted);
             }
         }
     }
