@@ -53,7 +53,7 @@ namespace ChronoDivergence
                 spriteHolder.transform.eulerAngles = new Vector3(0f, 0f, 270f);
             } else if (direction == Vector2.left)
             {
-                spriteHolder.transform.eulerAngles = new Vector3(0f, 0f, 270f);
+                spriteHolder.transform.eulerAngles = new Vector3(0f, 0f, 180f);
             } else if (direction == Vector2.up)
             {
                 spriteHolder.transform.eulerAngles = new Vector3(0f, 0f, 90f);

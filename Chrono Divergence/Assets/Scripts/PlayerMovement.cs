@@ -1,18 +1,30 @@
 using System.Collections.Generic;
+using ChronoDivergence.Events;
 using UnityEngine;
 
 namespace ChronoDivergence
 {
-    public class CharacterMovementTopdown : MonoBehaviour, IMovable
+    public class PlayerMovement : MonoBehaviour, IMovable
     {
         [SerializeField] private float moveSpeed;
         private MouseInput mouseInput;
         [SerializeField] private Vector2 destination;
         [SerializeField] private LayerMask collisionLayers;
+        [SerializeField] private Animator playerAnim;
         private bool canMoveByInput;
-        private Vector3 checkedOffset;
+        private Vector2 checkedOffset;
+        private IActivatable targetedActivatable;
+        private Vector2 lookingDirection;
 
         public float MoveSpeed => moveSpeed;
+
+        public Vector2 LookingDirection => lookingDirection;
+
+        public IActivatable TargetedActivatable
+        {
+            get => targetedActivatable;
+            set => targetedActivatable = value;
+        }
 
         public bool CanMoveByInput
         {
@@ -49,24 +61,43 @@ namespace ChronoDivergence
             }
         }
 
+        /// <summary>
+        /// Moves the player through input from the player
+        /// </summary>
         private void MoveByInput()
         {
             if (Vector2.Distance(transform.position, destination) < 0.1f)
             {
-                checkedOffset = GetDirectionOffset(mouseInput.Keyboard.Move.ReadValue<Vector2>());
+                checkedOffset = mouseInput.Keyboard.Move.ReadValue<Vector2>().normalized;
+                lookingDirection = checkedOffset;
+                playerAnim.SetFloat("horizontal", lookingDirection.x);
+                playerAnim.SetFloat("vertical", lookingDirection.y);
                 Move();
             }
         }
         
+        /// <summary>
+        /// Moves the player without input from the player
+        /// </summary>
+        /// <param name="direction">(Vector2) direction to move in</param>
+        /// <returns>(bool) returns if the move works successful</returns>
         private bool MoveForced(Vector2 direction)
         {
             checkedOffset = direction;
+            lookingDirection = checkedOffset;
+            playerAnim.SetFloat("horizontal", lookingDirection.x);
+            playerAnim.SetFloat("vertical", lookingDirection.y);
             return Move();
         }
 
+        /// <summary>
+        /// Moves the player
+        /// </summary>
+        /// <returns>(bool) returns if the move works successful</returns>
         private bool Move()
         {
             GameObject objectInFront = null;
+            Vector2 oldDestination = destination;
             int originalLayer = gameObject.layer;
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
             if (Physics2D.OverlapBox(
@@ -90,6 +121,7 @@ namespace ChronoDivergence
                     {
                         destination = new Vector3(destination.x + checkedOffset.x,
                             destination.y + checkedOffset.y).Round(0);
+                        Message.Raise(new PlayerMoveEvent(checkedOffset, destination, oldDestination));
                         return true;
                     }
                 }
@@ -98,33 +130,14 @@ namespace ChronoDivergence
             destination = new Vector3(destination.x + checkedOffset.x,
                 destination.y + checkedOffset.y);
             destination = destination.Round(0);
+            Message.Raise(new PlayerMoveEvent(checkedOffset, destination, oldDestination));
             return true;
         }
 
-        private Vector2 GetDirectionOffset(Vector2 vectorInput)
-        {
-            if (vectorInput == Vector2.right)
-            {
-                return new Vector2(1, 0);
-            }
-            else if (vectorInput == Vector2.left)
-            {
-                return new Vector2(-1, 0);
-            }
-            else if (vectorInput == Vector2.down)
-            {
-                return new Vector2(0, -1);
-            }
-            else if (vectorInput == Vector2.up)
-            {
-                return new Vector2(0, 1);
-            }
-            else
-            {
-                return Vector2.zero;
-            }
-        }
-
+        /// <summary>
+        /// Gets the movable direction of the IMovable
+        /// </summary>
+        /// <returns>int-direction in which the IMovable can move</returns>
         public int GetMovableDirections()
         {
             return 15;

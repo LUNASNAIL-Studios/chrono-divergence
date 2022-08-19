@@ -22,7 +22,7 @@ namespace ChronoDivergence
         [SerializeField] private Color minMovesNotReached;
         [SerializeField] private Color minMovesReached;
         private Vector2 destination;
-        private CharacterMovementTopdown player;
+        private PlayerMovement player;
         private float movesMade = 0;
 
         private void OnValidate()
@@ -32,7 +32,7 @@ namespace ChronoDivergence
 
         private void Start()
         {
-            player = GameObject.FindWithTag("Player").GetComponent<CharacterMovementTopdown>();
+            player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
             destination = gameObject.transform.position.Round(0);
             
             UpdateDisplayedParts();
