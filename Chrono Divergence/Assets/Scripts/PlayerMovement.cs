@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 using ChronoDivergence.Events;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace ChronoDivergence
 {
     public class PlayerMovement : MonoBehaviour, IMovable
     {
         [SerializeField] private float moveSpeed;
-        private MouseInput mouseInput;
+        private PlayerInput playerInput;
         [SerializeField] private Vector2 destination;
         [SerializeField] private LayerMask collisionLayers;
         [SerializeField] private Animator playerAnim;
@@ -19,6 +20,8 @@ namespace ChronoDivergence
         public float MoveSpeed => moveSpeed;
 
         public Vector2 LookingDirection => lookingDirection;
+
+        public Vector2 Destination => destination;
 
         public IActivatable TargetedActivatable
         {
@@ -34,17 +37,17 @@ namespace ChronoDivergence
 
         private void Awake()
         {
-            mouseInput = new MouseInput();
+            playerInput = new PlayerInput();
         }
 
         private void OnEnable()
         {
-            mouseInput.Enable();
+            playerInput.Enable();
         }
 
         private void OnDisable()
         {
-            mouseInput.Disable();
+            playerInput.Disable();
         }
 
         private void Start()
@@ -61,17 +64,31 @@ namespace ChronoDivergence
             }
         }
 
+        public void OnInteract(InputAction.CallbackContext ctx)
+        {
+            if (ctx.started)
+            {
+                Message.Raise(new PlayerInteractEvent(lookingDirection, destination));
+            }
+        }
+
         /// <summary>
         /// Moves the player through input from the player
         /// </summary>
         private void MoveByInput()
         {
-            if (Vector2.Distance(transform.position, destination) < 0.1f)
+           
+            checkedOffset = playerInput.Player.Move.ReadValue<Vector2>().normalized;
+            Debug.Log("PlayerInput: " + checkedOffset);
+            if (checkedOffset != Vector2.zero)
             {
-                checkedOffset = mouseInput.Keyboard.Move.ReadValue<Vector2>().normalized;
                 lookingDirection = checkedOffset;
                 playerAnim.SetFloat("horizontal", lookingDirection.x);
                 playerAnim.SetFloat("vertical", lookingDirection.y);
+            }
+
+            if (Vector2.Distance(transform.position, destination) < 0.1f)
+            {
                 Move();
             }
         }

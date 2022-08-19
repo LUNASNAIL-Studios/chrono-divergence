@@ -12,12 +12,20 @@ namespace ChronoDivergence
     }
     public class ConveyerBelt : MonoBehaviour
     {
-        [SerializeField] private Vector2 direction;
+        
         [SerializeField] private GameObject[] buttonsThatTriggerChange;
         [SerializeField] private ConveyerBeltTransformations transformationType;
         [SerializeField] private bool initiallyMoving;
+        [Header("Nicht verändern:")]
         [SerializeField] private GameObject spriteHolder;
+        [SerializeField] private Vector2 direction;
         private bool isMoving = true;
+
+        public Vector2 Direction
+        {
+            get => direction;
+            set => direction = value;
+        }
 
         private void OnValidate()
         {
@@ -43,7 +51,7 @@ namespace ChronoDivergence
             }
         }
 
-        private void UpdateDirection()
+        public void UpdateDirection()
         {
             if (direction == Vector2.right)
             {
