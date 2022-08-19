@@ -298,7 +298,7 @@ MonoBehaviour:
   blockID: 
   collisionLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 9
   maxMoves: -1
   minMoves: -1
   maxMovesText: {fileID: 2077692364688168453}
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 0
   m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3

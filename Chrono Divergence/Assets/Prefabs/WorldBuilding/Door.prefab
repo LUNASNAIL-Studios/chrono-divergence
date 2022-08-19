@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8503723918334882333}
+  - component: {fileID: 8503723918334882335}
   - component: {fileID: 8503723918334882530}
   - component: {fileID: 8503723918334882531}
-  - component: {fileID: 8503723918334882335}
   - component: {fileID: 8503723918334882332}
   m_Layer: 0
   m_Name: Door
@@ -35,6 +35,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8503723918334882335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8503723918334882529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba6f66213ff43c28446afe42b2a9246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 8503723918334882332}
+  isOpen: 0
+  isInverted: 0
+  staysOpen: 0
+  isActivatable: 1
+  neededIActivators:
+  - {fileID: 0}
 --- !u!212 &8503723918334882530
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -113,25 +132,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8503723918334882335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8503723918334882529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ba6f66213ff43c28446afe42b2a9246, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 8503723918334882332}
-  isOpen: 0
-  isInverted: 0
-  staysOpen: 0
-  isActivatable: 1
-  neededIActivators:
-  - {fileID: 0}
 --- !u!95 &8503723918334882332
 Animator:
   serializedVersion: 4
