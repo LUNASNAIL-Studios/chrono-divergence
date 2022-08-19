@@ -1,4 +1,5 @@
 ﻿using System;
+using ChronoDivergence.Events;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,15 +8,21 @@ namespace ChronoDivergence
 {
     public class Lever : MonoBehaviour, IActivatable
     {
-        [SerializeField] private Vector2 direction;
         [SerializeField] private UnityEvent OnActivation;
         [SerializeField] private UnityEvent OnDeactivation;
         [SerializeField] private bool isActivated;
         [SerializeField] private bool isActivatable;
-        [Header("Nicht verändern!")]
+        [Header("Nicht verändern:")]
         [SerializeField] private Animator anim;
         [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private Vector2 direction;
         private PlayerMovement player;
+
+        public Vector2 Direction
+        {
+            get => direction;
+            set => direction = value;
+        }
 
         private void Start()
         {
@@ -27,39 +34,30 @@ namespace ChronoDivergence
             UpdateDirection();
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnEnable()
         {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                if (player.LookingDirection == direction)
-                {
-                    player.TargetedActivatable = this;
-                    anim.SetBool("targeted", true);
-                }
-            }
+            Message<PlayerInteractEvent>.Add(OnInteractEvent);
+            Message<PlayerMoveEvent>.Add(OnPlayerMoveEvent);
+        }
+        
+        private void OnDisable()
+        {
+            Message<PlayerInteractEvent>.Remove(OnInteractEvent);
+            Message<PlayerMoveEvent>.Remove(OnPlayerMoveEvent);
         }
 
-        private void OnTriggerExit2D(Collider2D other)
+        private void OnInteractEvent(PlayerInteractEvent ctx)
         {
-            if (other.gameObject.CompareTag("Player"))
+            if (isActivatable)
             {
-                if ((Lever)player.TargetedActivatable == this)
+                if ((Lever) player.TargetedActivatable == this)
                 {
-                    player.TargetedActivatable = null;
-                    anim.SetBool("targeted", false);
+                    ToggleButton();
                 }
-            }
-        }
-
-        private void InteractEvent()
-        {
-            if ((Lever)player.TargetedActivatable == this)
-            {
-                ToggleButton();
             }
         }
         
-        private void UpdateDirection()
+        public void UpdateDirection()
         {
             if (direction == Vector2.right)
             {
@@ -88,6 +86,34 @@ namespace ChronoDivergence
                 OnDeactivation.Invoke();
             }
             anim.SetBool("activated", isActivated);
+        }
+
+        private void OnPlayerMoveEvent(PlayerMoveEvent ctx)
+        {
+            if (player.Destination == (Vector2)gameObject.transform.position)
+            {
+                if (player.LookingDirection == direction)
+                {
+                    player.TargetedActivatable = this;
+                    anim.SetBool("targeted", true);
+                }
+                else
+                {
+                    if ((Lever)player.TargetedActivatable == this)
+                    {
+                        player.TargetedActivatable = null;
+                        anim.SetBool("targeted", false);
+                    }
+                }
+            }
+            else
+            {
+                if ((Lever)player.TargetedActivatable == this)
+                {
+                    player.TargetedActivatable = null;
+                    anim.SetBool("targeted", false);
+                }
+            }
         }
 
         public bool IsActivated()
