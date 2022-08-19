@@ -15638,7 +15638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8503723918334882335, guid: 3ab9dd48c8236844eae115dd00d6c229, type: 3}
       propertyPath: isInverted
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8503723918334882335, guid: 3ab9dd48c8236844eae115dd00d6c229, type: 3}
       propertyPath: neededIActivators.Array.size
