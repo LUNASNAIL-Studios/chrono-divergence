@@ -16,8 +16,9 @@ namespace ChronoDivergence
         [SerializeField] private Animator anim;
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private Vector2 direction;
+        [SerializeField] [Range(0,5)] private float cooldownDuration;
         private PlayerMovement player;
-        
+        private float leverCooldown;
 
         public Vector2 Direction
         {
@@ -28,6 +29,18 @@ namespace ChronoDivergence
         private void Start()
         {
             player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+        }
+
+        private void Update()
+        {
+            if (leverCooldown > 0)
+            {
+                leverCooldown -= Time.deltaTime;
+            }
+            else
+            {
+                leverCooldown = 0;
+            }
         }
 
         private void OnValidate()
@@ -77,35 +90,28 @@ namespace ChronoDivergence
         
         private void ToggleButton()
         {
-            isActivated = !isActivated;
-            if (isActivated)
+            if (leverCooldown <= 0)
             {
-                OnActivation.Invoke();
+                isActivated = !isActivated;
+                if (isActivated)
+                {
+                    OnActivation.Invoke();
+                }
+                else
+                {
+                    OnDeactivation.Invoke();
+                }
+                anim.SetBool("activated", isActivated);
+                leverCooldown = cooldownDuration;
             }
-            else
-            {
-                OnDeactivation.Invoke();
-            }
-            anim.SetBool("activated", isActivated);
         }
 
         private void OnPlayerMoveEvent(PlayerMoveEvent ctx)
         {
             if (player.Destination == (Vector2)gameObject.transform.position)
             {
-                //if (player.LookingDirection == direction)
-                //{
-                    player.TargetedActivatable = this;
-                    anim.SetBool("targeted", true);
-                //}
-                //else
-                //{
-                //    if ((Lever)player.TargetedActivatable == this)
-                //    {
-                //        player.TargetedActivatable = null;
-                //        anim.SetBool("targeted", false);
-                //    }
-                //}
+                player.TargetedActivatable = this;
+                anim.SetBool("targeted", true);
             }
             else
             {

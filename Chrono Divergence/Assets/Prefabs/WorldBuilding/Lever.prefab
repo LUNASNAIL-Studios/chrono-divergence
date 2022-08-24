@@ -58,6 +58,7 @@ MonoBehaviour:
   anim: {fileID: 4232902293636103482}
   spriteRenderer: {fileID: 4232902294745542169}
   direction: {x: 0, y: -1}
+  cooldownDuration: 0.4
 --- !u!95 &4232902293636103482
 Animator:
   serializedVersion: 4
