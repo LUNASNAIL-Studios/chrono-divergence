@@ -17,6 +17,7 @@ namespace ChronoDivergence
         [SerializeField] private SpriteRenderer spriteRenderer;
         [SerializeField] private Vector2 direction;
         private PlayerMovement player;
+        
 
         public Vector2 Direction
         {

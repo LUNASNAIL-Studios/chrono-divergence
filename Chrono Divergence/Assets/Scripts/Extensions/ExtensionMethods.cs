@@ -53,5 +53,20 @@ namespace ChronoDivergence
 
             return resultList;
         }
+
+        public static Vector2 Rotate(this Vector2 vectorToRotate, float angle)
+        {
+            //return Quaternion.AngleAxis(angle, Vector3.up) * vectorToRotate;
+            
+            float theta = Mathf.Deg2Rad * angle;
+
+            float cs = Mathf.Cos(theta);
+            float sn = Mathf.Sin(theta);
+
+            float rx = vectorToRotate.x * cs - vectorToRotate.y * sn;
+            float ry = vectorToRotate.x * sn + vectorToRotate.y * cs;
+            
+            return new Vector2(rx, ry);
+        }
     }
 }
