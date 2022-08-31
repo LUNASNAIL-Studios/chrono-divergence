@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1110187507608630265}
   - component: {fileID: 1175299253490277641}
   m_Layer: 0
-  m_Name: GridShadowPrefab
+  m_Name: ShadowCasterPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,15 +13,15 @@ namespace ChronoDivergence
         void FixedUpdate()
         {
             laserLineRenderer.SetPosition(0, transform.position);
-            RaycastHit2D hit = Physics2D.Raycast(laserOutput.position, transform.up);
+            RaycastHit2D hit = Physics2D.Raycast(laserOutput.position, transform.up, 100);
             if (hit.collider)
             {
                 var position = laserOutput.localPosition;
                 laserLineRenderer.SetPosition(1, new Vector3(hit.point.x, hit.point.y, position.z));
                 laserLight.shapePath[0] = position + Vector3.right * 0.1f;
                 laserLight.shapePath[1] = position + Vector3.right * -0.1f;
-                laserLight.shapePath[2] = Vector3.up * Vector3.Distance(laserOutput.position, hit.point) + Vector3.right * 0.1f;
-                laserLight.shapePath[3] = Vector3.up * Vector3.Distance(laserOutput.position, hit.point) + Vector3.right * -0.1f;
+                laserLight.shapePath[2] = (Vector3.up * Vector3.Distance(laserOutput.position, hit.point)) + Vector3.right * 0.1f;
+                laserLight.shapePath[3] = (Vector3.up * Vector3.Distance(laserOutput.position, hit.point)) + Vector3.right * -0.1f;
             }
             else
             {
