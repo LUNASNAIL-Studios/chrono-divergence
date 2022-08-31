@@ -310,6 +310,18 @@ PrefabInstance:
       propertyPath: direction.y
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: transformationType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: buttonsThatTriggerChange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: buttonsThatTriggerChange.Array.data[0]
+      value: 
+      objectReference: {fileID: 1754921158}
     - target: {fileID: 7571839779643640307, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.7071068
@@ -10225,6 +10237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c76756cd2a94a4a8411abe206461f5, type: 3}
+--- !u!1 &419562868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232902293636103481, guid: 17c76756cd2a94a4a8411abe206461f5, type: 3}
+  m_PrefabInstance: {fileID: 419562867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &517474922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15628,6 +15645,18 @@ PrefabInstance:
       propertyPath: direction.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: transformationType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: buttonsThatTriggerChange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: buttonsThatTriggerChange.Array.data[0]
+      value: 
+      objectReference: {fileID: 419562868}
     - target: {fileID: 7571839779643640307, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.00000004371139
@@ -15833,6 +15862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17c76756cd2a94a4a8411abe206461f5, type: 3}
+--- !u!1 &1754921158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4232902293636103481, guid: 17c76756cd2a94a4a8411abe206461f5, type: 3}
+  m_PrefabInstance: {fileID: 1754921157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2119129150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15896,6 +15930,18 @@ PrefabInstance:
       propertyPath: direction.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: transformationType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: buttonsThatTriggerChange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: buttonsThatTriggerChange.Array.data[0]
+      value: 
+      objectReference: {fileID: 419562868}
     - target: {fileID: 7571839779643640307, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.00000004371139
@@ -15969,6 +16015,18 @@ PrefabInstance:
       propertyPath: direction.y
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: transformationType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: buttonsThatTriggerChange.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208476310768178018, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
+      propertyPath: buttonsThatTriggerChange.Array.data[0]
+      value: 
+      objectReference: {fileID: 419562868}
     - target: {fileID: 7571839779643640307, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.7071068
