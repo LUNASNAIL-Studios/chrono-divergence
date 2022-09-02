@@ -21,7 +21,11 @@ namespace ChronoDivergence
 
         public Vector2 LookingDirection => lookingDirection;
 
-        public Vector2 Destination => destination;
+        public Vector2 Destination
+        {
+            get => destination;
+            set => destination = value;
+        }
 
         public IActivatable TargetedActivatable
         {
