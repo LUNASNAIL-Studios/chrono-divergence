@@ -48,7 +48,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.37796518, g: 0.7830189, b: 0, a: 1}
   m_Intensity: 2
   m_LightVolumeIntensity: 0.1
   m_LightVolumeIntensityEnabled: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
   m_ShadowIntensityEnabled: 1
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensity: 0.3
   m_ShadowVolumeIntensityEnabled: 1
   m_ShadowVolumeIntensity: 0.75
   m_Vertices:
@@ -158,10 +158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c591dacc606b22e40898aa70d4c29cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  portalColor: {r: 1, g: 1, b: 1, a: 1}
+  portalColor: {r: 0.37796518, g: 0.7830189, b: 0, a: 1}
   targetTeleporter: {fileID: 0}
   portalRenderer: {fileID: 8687341140387880347}
   portalLight: {fileID: 3597226545369871926}
+  isVisible: 1
 --- !u!61 &8687341140067622825
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -262,7 +263,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b1f630cec94d0a44eaec977c80aee118, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.37796518, g: 0.7830189, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
