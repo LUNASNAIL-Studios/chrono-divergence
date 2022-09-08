@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -10,6 +11,7 @@ namespace ChronoDivergence
         [SerializeField] private Teleporter targetTeleporter;
         [SerializeField] private SpriteRenderer portalRenderer;
         [SerializeField] private Light2D portalLight;
+        [SerializeField] private bool isVisible;
         private bool justUsed;
         private PlayerMovement player;
 
@@ -55,15 +57,23 @@ namespace ChronoDivergence
 
         public void UpdatePortal()
         {
-            portalRenderer.color = portalColor;
-            portalLight.color = portalColor;
+            if (isVisible)
+            {
+                portalLight.color = portalColor;
+                portalRenderer.color = new Color(portalColor.r, portalColor.g, portalColor.b, 1);
+            }
+            else
+            {
+                portalLight.color = Color.black;
+                portalRenderer.color = new Color(portalColor.r, portalColor.g, portalColor.b, 0);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (targetTeleporter)
             {
-                if (!justUsed)
+                if (!justUsed && isVisible)
                 {
                     if (col.CompareTag("Player"))
                     {
