@@ -11,9 +11,9 @@ namespace ChronoDivergence
 
         private void Start()
         {
-            if (GameObject.FindWithTag("LevelSceneSettings"))
+            if (GameObject.FindWithTag("SceneSettings"))
             {
-                levelSettings = GameObject.FindWithTag("LevelSceneSettings").GetComponent<LevelSceneSettings>();
+                levelSettings = GameObject.FindWithTag("SceneSettings").GetComponent<LevelSceneSettings>();
             }
 
             UpdateValues();
@@ -24,8 +24,13 @@ namespace ChronoDivergence
             UpdateValues();
         }
 
-        private void UpdateValues()
+        public void UpdateValues()
         {
+            if (levelSettings == null && GameObject.FindWithTag("SceneSettings"))
+            {
+                levelSettings = GameObject.FindWithTag("SceneSettings").GetComponent<LevelSceneSettings>();
+            }
+            
             if (levelSettings != null && globalLightSource != null)
             {
                 globalLightSource.intensity = levelSettings.Lightintensity;
