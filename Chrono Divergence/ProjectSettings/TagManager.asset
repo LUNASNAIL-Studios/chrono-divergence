@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - GenerateShadowCasters
+  - SceneSettings
   layers:
   - Default
   - TransparentFX
