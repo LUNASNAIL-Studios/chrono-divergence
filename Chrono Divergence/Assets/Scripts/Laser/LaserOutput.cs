@@ -35,7 +35,7 @@ namespace ChronoDivergence
                         activeLaserInteractor = null;
                         activeLaserInteractor = laserInteractor;
                     }
-                    laserInteractor.ReceiveLaser();
+                    laserInteractor.ReceiveLaser(transform.up);
                 }
                 else
                 {

@@ -11,7 +11,7 @@ public class LaserReceiver : MonoBehaviour, IActivatable, ILaserInteractor
     [SerializeField] private bool isActivated;
     [SerializeField] private bool isActivatable;
 
-    public void ReceiveLaser()
+    public void ReceiveLaser(Vector2 direction)
     {
         if (isActivatable)
         {

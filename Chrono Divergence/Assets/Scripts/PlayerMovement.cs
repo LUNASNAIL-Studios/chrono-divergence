@@ -83,7 +83,6 @@ namespace ChronoDivergence
         {
            
             checkedOffset = playerInput.Player.Move.ReadValue<Vector2>().normalized;
-            Debug.Log("PlayerInput: " + checkedOffset);
             if (checkedOffset != Vector2.zero)
             {
                 lookingDirection = checkedOffset;
