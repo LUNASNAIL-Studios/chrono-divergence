@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 6287360936839545938}
   - component: {fileID: 441508439188599472}
   - component: {fileID: 5564236071291679064}
+  - component: {fileID: 7445748252353860448}
   m_Layer: 5
   m_Name: LevelButton
   m_TagString: Untagged
@@ -224,6 +225,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ab8236081147eba3426f3a4859d730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7445748252353860448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7293669928254884758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 0}
+  isCompletedByLevel: 0
+  requiredLevelID: 0
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 6287360936839545938}
+  - {fileID: 3763926632363106526}
+  changedButton: {fileID: 441508439188599472}
 --- !u!1 &7606330781061237752
 GameObject:
   m_ObjectHideFlags: 0

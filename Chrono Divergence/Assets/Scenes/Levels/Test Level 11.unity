@@ -10096,7 +10096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac06ea83bc0c8994bb72dbd4e923be60, type: 3}
---- !u!43 &807604688
+--- !u!43 &817203781
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15764,6 +15764,10 @@ PrefabInstance:
     - target: {fileID: 8687341140067622743, guid: cfe73656ce96c864593411b99a8c724c, type: 3}
       propertyPath: m_Name
       value: FinishPortal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687341140067622824, guid: cfe73656ce96c864593411b99a8c724c, type: 3}
+      propertyPath: levelID
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfe73656ce96c864593411b99a8c724c, type: 3}

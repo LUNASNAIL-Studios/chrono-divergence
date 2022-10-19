@@ -7,6 +7,7 @@ namespace ChronoDivergence
     public class LevelFinish : MonoBehaviour
     {
         [SerializeField] private GameObject canvas;
+        [SerializeField] private int levelID;
 
         private void Start()
         {
@@ -19,6 +20,7 @@ namespace ChronoDivergence
             {
                 Debug.Log("Level Finished!");
                 canvas.SetActive(true);
+                PlayerPrefs.SetInt("LEVELCOMPLETED_" + levelID, 1);
                 //TODO: Alot of stuff!
             }
         }

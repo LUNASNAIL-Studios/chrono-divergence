@@ -554,6 +554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker.Array.data[0]
+      value: 
+      objectReference: {fileID: 728851755}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!224 &262959961 stripped
@@ -669,6 +673,7 @@ GameObject:
   - component: {fileID: 327931956}
   - component: {fileID: 327931955}
   - component: {fileID: 327931954}
+  - component: {fileID: 327931957}
   m_Layer: 5
   m_Name: TimelinePart (6)
   m_TagString: Untagged
@@ -748,6 +753,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327931952}
   m_CullTransparentMesh: 1
+--- !u!114 &327931957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327931952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 1
+  requiredLevelID: 8
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 327931955}
+  changedButton: {fileID: 0}
 --- !u!1 &396862704
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +787,7 @@ GameObject:
   - component: {fileID: 396862707}
   - component: {fileID: 396862706}
   - component: {fileID: 396862708}
+  - component: {fileID: 396862709}
   m_Layer: 5
   m_Name: TimelinePart (2)
   m_TagString: Untagged
@@ -839,6 +867,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &396862709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396862704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 1
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 396862706}
+  changedButton: {fileID: 0}
 --- !u!1001 &464813948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -964,6 +1014,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker
+      value: 
+      objectReference: {fileID: 1833175014}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker.Array.data[0]
+      value: 
+      objectReference: {fileID: 1833175014}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!1 &464813949 stripped
@@ -983,6 +1041,7 @@ GameObject:
   - component: {fileID: 465009270}
   - component: {fileID: 465009269}
   - component: {fileID: 465009271}
+  - component: {fileID: 465009272}
   m_Layer: 5
   m_Name: TimelinePart (1)
   m_TagString: Untagged
@@ -1062,6 +1121,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &465009272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465009267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 1
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 465009269}
+  changedButton: {fileID: 0}
 --- !u!1 &490734085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1155,7 @@ GameObject:
   - component: {fileID: 490734088}
   - component: {fileID: 490734087}
   - component: {fileID: 490734089}
+  - component: {fileID: 490734090}
   m_Layer: 5
   m_Name: TimelinePart (5)
   m_TagString: Untagged
@@ -1153,6 +1235,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &490734090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490734085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 2110481757}
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 490734087}
+  changedButton: {fileID: 0}
 --- !u!1 &500268504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1270,7 @@ GameObject:
   - component: {fileID: 500268507}
   - component: {fileID: 500268506}
   - component: {fileID: 500268508}
+  - component: {fileID: 500268509}
   m_Layer: 5
   m_Name: TimelinePart (3)
   m_TagString: Untagged
@@ -1244,6 +1350,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &500268509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500268504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 1059057267}
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 500268506}
+  changedButton: {fileID: 0}
 --- !u!1001 &522524638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1355,6 +1484,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: changedButton
+      value: 
+      objectReference: {fileID: 999698011}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker.Array.data[0]
+      value: 
+      objectReference: {fileID: 500268509}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!1 &522524639 stripped
@@ -1374,6 +1511,7 @@ GameObject:
   - component: {fileID: 543910508}
   - component: {fileID: 543910507}
   - component: {fileID: 543910509}
+  - component: {fileID: 543910510}
   m_Layer: 5
   m_Name: TimelinePart (5)
   m_TagString: Untagged
@@ -1453,6 +1591,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &543910510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543910505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 866307830}
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 543910507}
+  changedButton: {fileID: 0}
 --- !u!1 &578147246
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,6 +1626,7 @@ GameObject:
   - component: {fileID: 578147249}
   - component: {fileID: 578147248}
   - component: {fileID: 578147250}
+  - component: {fileID: 578147251}
   m_Layer: 5
   m_Name: TimelinePart
   m_TagString: Untagged
@@ -1544,6 +1706,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &578147251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578147246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 1
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 578147248}
+  changedButton: {fileID: 0}
 --- !u!224 &715884036 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3396972014642635333, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
@@ -1575,6 +1759,7 @@ GameObject:
   - component: {fileID: 728851754}
   - component: {fileID: 728851753}
   - component: {fileID: 728851752}
+  - component: {fileID: 728851755}
   m_Layer: 5
   m_Name: TimelinePart (6)
   m_TagString: Untagged
@@ -1654,6 +1839,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728851750}
   m_CullTransparentMesh: 1
+--- !u!114 &728851755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728851750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 1
+  requiredLevelID: 10
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 728851753}
+  changedButton: {fileID: 0}
 --- !u!1001 &732075561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1777,6 +1984,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: requiredLevelID
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: isCompletedByLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: isCompletedByOtherChecker
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!224 &732075562 stripped
@@ -1815,6 +2034,7 @@ GameObject:
   - component: {fileID: 735370381}
   - component: {fileID: 735370380}
   - component: {fileID: 735370382}
+  - component: {fileID: 735370383}
   m_Layer: 5
   m_Name: TimelinePart (1)
   m_TagString: Untagged
@@ -1894,6 +2114,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &735370383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735370378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 1
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 735370380}
+  changedButton: {fileID: 0}
 --- !u!1 &739774515
 GameObject:
   m_ObjectHideFlags: 0
@@ -2047,6 +2289,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: isCompletedByDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: isCompletedByOtherChecker
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!1 &768529206 stripped
@@ -2066,6 +2320,7 @@ GameObject:
   - component: {fileID: 791112837}
   - component: {fileID: 791112836}
   - component: {fileID: 791112838}
+  - component: {fileID: 791112839}
   m_Layer: 5
   m_Name: TimelinePart (3)
   m_TagString: Untagged
@@ -2145,6 +2400,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &791112839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791112834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 1059057267}
+  isCompletedByLevel: 1
+  requiredLevelID: 4
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 791112836}
+  changedButton: {fileID: 0}
 --- !u!1 &802334610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2354,6 +2632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker.Array.data[0]
+      value: 
+      objectReference: {fileID: 543910510}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!224 &813739867 stripped
@@ -2392,6 +2674,7 @@ GameObject:
   - component: {fileID: 866307828}
   - component: {fileID: 866307827}
   - component: {fileID: 866307829}
+  - component: {fileID: 866307830}
   m_Layer: 5
   m_Name: TimelinePart (4)
   m_TagString: Untagged
@@ -2471,6 +2754,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &866307830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866307825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 490734090}
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 866307827}
+  changedButton: {fileID: 0}
 --- !u!1 &874764386
 GameObject:
   m_ObjectHideFlags: 0
@@ -2483,6 +2789,7 @@ GameObject:
   - component: {fileID: 874764389}
   - component: {fileID: 874764388}
   - component: {fileID: 874764390}
+  - component: {fileID: 874764391}
   m_Layer: 5
   m_Name: TimelinePart (5)
   m_TagString: Untagged
@@ -2562,6 +2869,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &874764391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874764386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 490734090}
+  isCompletedByLevel: 1
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 874764388}
+  changedButton: {fileID: 0}
 --- !u!1 &934970108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2574,6 +2904,7 @@ GameObject:
   - component: {fileID: 934970112}
   - component: {fileID: 934970111}
   - component: {fileID: 934970110}
+  - component: {fileID: 934970113}
   m_Layer: 5
   m_Name: TimelinePart (9)
   m_TagString: Untagged
@@ -2653,6 +2984,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934970108}
   m_CullTransparentMesh: 1
+--- !u!114 &934970113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934970108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 1533018597}
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 934970111}
+  changedButton: {fileID: 0}
 --- !u!224 &999698008 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3396972014642635333, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
@@ -2672,6 +3026,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &999698011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 441508439188599472, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+  m_PrefabInstance: {fileID: 522524638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522524639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &999698014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+  m_PrefabInstance: {fileID: 522524638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522524639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1014997844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2832,6 +3208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker.Array.data[0]
+      value: 
+      objectReference: {fileID: 2135790340}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!224 &1047336707 stripped
@@ -2870,6 +3250,7 @@ GameObject:
   - component: {fileID: 1059057265}
   - component: {fileID: 1059057264}
   - component: {fileID: 1059057266}
+  - component: {fileID: 1059057267}
   m_Layer: 5
   m_Name: TimelinePart (2)
   m_TagString: Untagged
@@ -2949,6 +3330,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1059057267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059057262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 1
+  requiredLevelID: 2
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 1059057264}
+  changedButton: {fileID: 0}
 --- !u!1001 &1112741548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3074,6 +3477,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: requiredLevelID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: isCompletedByLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: isCompletedByOtherChecker
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!1 &1112741549 stripped
@@ -3107,6 +3526,7 @@ GameObject:
   - component: {fileID: 1216272529}
   - component: {fileID: 1216272528}
   - component: {fileID: 1216272530}
+  - component: {fileID: 1216272531}
   m_Layer: 5
   m_Name: TimelinePart
   m_TagString: Untagged
@@ -3186,6 +3606,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1216272531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216272526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 1
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 0
+  requiredLevelID: 0
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
+  changedImages:
+  - {fileID: 1216272528}
+  changedButton: {fileID: 0}
 --- !u!1 &1355669778
 GameObject:
   m_ObjectHideFlags: 0
@@ -3198,6 +3640,7 @@ GameObject:
   - component: {fileID: 1355669781}
   - component: {fileID: 1355669780}
   - component: {fileID: 1355669782}
+  - component: {fileID: 1355669783}
   m_Layer: 5
   m_Name: TimelinePart
   m_TagString: Untagged
@@ -3277,6 +3720,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1355669783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355669778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 1
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 1355669780}
+  changedButton: {fileID: 0}
 --- !u!1 &1377963716
 GameObject:
   m_ObjectHideFlags: 0
@@ -3750,6 +4215,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: isCompletedByDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: isCompletedByOtherChecker
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!1 &1518368710 stripped
@@ -3896,6 +4369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker.Array.data[0]
+      value: 
+      objectReference: {fileID: 791112839}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!1 &1525068419 stripped
@@ -3915,6 +4392,7 @@ GameObject:
   - component: {fileID: 1533018596}
   - component: {fileID: 1533018595}
   - component: {fileID: 1533018594}
+  - component: {fileID: 1533018597}
   m_Layer: 5
   m_Name: TimelinePart (8)
   m_TagString: Untagged
@@ -3994,6 +4472,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533018592}
   m_CullTransparentMesh: 1
+--- !u!114 &1533018597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533018592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 1848614830}
+  - {fileID: 1711500116}
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 1533018595}
+  changedButton: {fileID: 0}
 --- !u!1 &1649600888
 GameObject:
   m_ObjectHideFlags: 0
@@ -4181,6 +4683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker.Array.data[0]
+      value: 
+      objectReference: {fileID: 490734090}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!224 &1681597866 stripped
@@ -4254,7 +4760,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704338017}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
@@ -4310,6 +4816,7 @@ GameObject:
   - component: {fileID: 1711500115}
   - component: {fileID: 1711500114}
   - component: {fileID: 1711500113}
+  - component: {fileID: 1711500116}
   m_Layer: 5
   m_Name: TimelinePart (7)
   m_TagString: Untagged
@@ -4389,6 +4896,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711500111}
   m_CullTransparentMesh: 1
+--- !u!114 &1711500116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711500111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 1
+  requiredLevelID: 11
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 1711500114}
+  changedButton: {fileID: 0}
 --- !u!224 &1803035414 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3396972014642635333, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
@@ -4420,6 +4949,7 @@ GameObject:
   - component: {fileID: 1833175012}
   - component: {fileID: 1833175011}
   - component: {fileID: 1833175013}
+  - component: {fileID: 1833175014}
   m_Layer: 5
   m_Name: TimelinePart (1)
   m_TagString: Untagged
@@ -4499,6 +5029,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1833175014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833175009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 1
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 1833175011}
+  changedButton: {fileID: 0}
 --- !u!1001 &1846013422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4624,6 +5176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelButton (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: otherChecker.Array.data[0]
+      value: 
+      objectReference: {fileID: 1891960292}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
 --- !u!224 &1846013423 stripped
@@ -4662,6 +5218,7 @@ GameObject:
   - component: {fileID: 1848614829}
   - component: {fileID: 1848614828}
   - component: {fileID: 1848614827}
+  - component: {fileID: 1848614830}
   m_Layer: 5
   m_Name: TimelinePart (7)
   m_TagString: Untagged
@@ -4741,6 +5298,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848614825}
   m_CullTransparentMesh: 1
+--- !u!114 &1848614830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848614825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 0
+  otherChecker:
+  - {fileID: 728851755}
+  - {fileID: 327931957}
+  isCompletedByLevel: 1
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 1848614828}
+  changedButton: {fileID: 0}
 --- !u!1 &1869903727
 GameObject:
   m_ObjectHideFlags: 0
@@ -4982,6 +5563,7 @@ GameObject:
   - component: {fileID: 1891960291}
   - component: {fileID: 1891960290}
   - component: {fileID: 1891960289}
+  - component: {fileID: 1891960292}
   m_Layer: 5
   m_Name: TimelinePart (7)
   m_TagString: Untagged
@@ -5061,6 +5643,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891960287}
   m_CullTransparentMesh: 1
+--- !u!114 &1891960292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891960287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 0
+  otherChecker:
+  - {fileID: 934970113}
+  isCompletedByLevel: 1
+  requiredLevelID: 12
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 1891960290}
+  changedButton: {fileID: 0}
 --- !u!1 &1976912901
 GameObject:
   m_ObjectHideFlags: 0
@@ -5073,6 +5678,7 @@ GameObject:
   - component: {fileID: 1976912904}
   - component: {fileID: 1976912903}
   - component: {fileID: 1976912905}
+  - component: {fileID: 1976912906}
   m_Layer: 5
   m_Name: TimelinePart (2)
   m_TagString: Untagged
@@ -5152,6 +5758,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1976912906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976912901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 1
+  requiredLevelID: 5
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 1976912903}
+  changedButton: {fileID: 0}
 --- !u!1 &1994185149
 GameObject:
   m_ObjectHideFlags: 0
@@ -5201,6 +5829,7 @@ GameObject:
   - component: {fileID: 2006198785}
   - component: {fileID: 2006198784}
   - component: {fileID: 2006198786}
+  - component: {fileID: 2006198787}
   m_Layer: 5
   m_Name: TimelinePart (4)
   m_TagString: Untagged
@@ -5280,6 +5909,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &2006198787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006198782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 0
+  otherChecker: []
+  isCompletedByLevel: 1
+  requiredLevelID: 7
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 2006198784}
+  changedButton: {fileID: 0}
 --- !u!1 &2028535582
 GameObject:
   m_ObjectHideFlags: 0
@@ -5292,6 +5943,7 @@ GameObject:
   - component: {fileID: 2028535585}
   - component: {fileID: 2028535584}
   - component: {fileID: 2028535586}
+  - component: {fileID: 2028535587}
   m_Layer: 5
   m_Name: TimelinePart (3)
   m_TagString: Untagged
@@ -5371,6 +6023,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &2028535587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028535582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 2028535587}
+  isCompletedByLevel: 0
+  requiredLevelID: 0
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 2028535584}
+  changedButton: {fileID: 0}
 --- !u!224 &2032824705 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3396972014642635333, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
@@ -5402,6 +6077,7 @@ GameObject:
   - component: {fileID: 2110481755}
   - component: {fileID: 2110481754}
   - component: {fileID: 2110481756}
+  - component: {fileID: 2110481757}
   m_Layer: 5
   m_Name: TimelinePart (4)
   m_TagString: Untagged
@@ -5481,6 +6157,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &2110481757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110481752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 2028535587}
+  - {fileID: 999698014}
+  - {fileID: 2006198787}
+  isCompletedByLevel: 1
+  requiredLevelID: 6
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 2110481754}
+  changedButton: {fileID: 0}
 --- !u!1 &2135790335
 GameObject:
   m_ObjectHideFlags: 0
@@ -5493,6 +6194,7 @@ GameObject:
   - component: {fileID: 2135790338}
   - component: {fileID: 2135790337}
   - component: {fileID: 2135790339}
+  - component: {fileID: 2135790340}
   m_Layer: 5
   m_Name: TimelinePart (6)
   m_TagString: Untagged
@@ -5572,6 +6274,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &2135790340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135790335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614fe96ee2764f5c954346f889452f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompletedByDefault: 0
+  isCompletedByOtherChecker: 1
+  otherChecker:
+  - {fileID: 874764391}
+  isCompletedByLevel: 0
+  requiredLevelID: 1
+  ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
+  DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
+  changedImages:
+  - {fileID: 2135790337}
+  changedButton: {fileID: 0}
 --- !u!1001 &7499541286842570035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5670,6 +6395,14 @@ PrefabInstance:
     - target: {fileID: 7293669928254884758, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
       propertyPath: m_Name
       value: LevelButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: isCompletedByDefault
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7445748252353860448, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
+      propertyPath: isCompletedByOtherChecker
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42dd6effedc46a4d8efadd5086dc45b, type: 3}
