@@ -2885,7 +2885,7 @@ MonoBehaviour:
   isCompletedByOtherChecker: 1
   otherChecker:
   - {fileID: 490734090}
-  isCompletedByLevel: 1
+  isCompletedByLevel: 0
   requiredLevelID: 1
   ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
   DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
@@ -5311,11 +5311,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCompletedByDefault: 0
-  isCompletedByOtherChecker: 0
+  isCompletedByOtherChecker: 1
   otherChecker:
   - {fileID: 728851755}
   - {fileID: 327931957}
-  isCompletedByLevel: 1
+  isCompletedByLevel: 0
   requiredLevelID: 1
   ActivatedColor: {r: 1, g: 1, b: 1, a: 1}
   DeactivatedColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}

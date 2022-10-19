@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    private bool[] levelCompleted;
-    private int numberOfLevels;
     private void Start()
     {
     }

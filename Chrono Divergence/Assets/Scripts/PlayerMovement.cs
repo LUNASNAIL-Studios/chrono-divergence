@@ -85,6 +85,10 @@ namespace ChronoDivergence
             checkedOffset = playerInput.Player.Move.ReadValue<Vector2>().normalized;
             if (checkedOffset != Vector2.zero)
             {
+                if (checkedOffset.x != 0)
+                {
+                    checkedOffset.y = 0;
+                }
                 lookingDirection = checkedOffset;
                 playerAnim.SetFloat("horizontal", lookingDirection.x);
                 playerAnim.SetFloat("vertical", lookingDirection.y);
