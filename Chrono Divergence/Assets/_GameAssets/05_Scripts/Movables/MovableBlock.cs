@@ -8,106 +8,33 @@ namespace ChronoDivergence
 {
     public class MovableBlock : MonoBehaviour, IMovable
     {
-        [SerializeField] private string blockID = "";
+        [SerializeField] protected string blockID = "";
         [SerializeField] private LayerMask collisionLayers;
-        [SerializeField] private int maxMoves = -1;
-        [SerializeField] private int minMoves = -1;
-        [Header("Dont change:")]
-        [SerializeField] private TMP_Text maxMovesText;
-        [SerializeField] private TMP_Text idText;
-        [SerializeField] private Image minMovesRing;
-        [SerializeField] private SpriteRenderer maxMovesGo;
-        [SerializeField] private SpriteRenderer minMovesGo;
-        [SerializeField] private SpriteRenderer idGo;
-        [SerializeField] private Color minMovesNotReached;
-        [SerializeField] private Color minMovesReached;
-        private Vector2 destination;
-        private PlayerMovement player;
-        private float movesMade = 0;
+        [SerializeField] protected Color idColor;
+        [SerializeField] protected Sprite idIcon;
+        [SerializeField] protected SpriteRenderer idColorDisplay;
+        [SerializeField] protected SpriteRenderer mainSpriteRenderer;
+        protected Vector2 destination;
+        protected PlayerMovement player;
+        public float movesMade = 0;
 
         private void OnValidate()
         {
-            UpdateDisplayedParts();
+            if (idColor != null && idColorDisplay != null)
+            {
+                idColorDisplay.color = idColor;
+            }
         }
 
         private void Start()
         {
             player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
             destination = gameObject.transform.position.Round(0);
-            
-            UpdateDisplayedParts();
-        }
-
-        private void UpdateDisplayedParts()
-        {
-            int maxMovesInt = maxMoves;
-            maxMovesText.text = maxMovesInt.ToString();
-            idText.text = blockID.ToString();
-            
-            //Set the correct sprites and texts:
-            if (blockID == "")
-            {
-                idText.color = new Color(0, 0, 0, 0);
-                idGo.color = new Color(0, 0, 0, 0);
-            }
-            else
-            {
-                idText.color = new Color(0, 0, 0, 1);
-                idGo.color = new Color(1, 1, 1, 1);
-            }
-
-            if (maxMoves == -1)
-            {
-                maxMovesText.color = new Color(0, 0, 0, 0);
-                maxMovesGo.color = new Color(0, 0, 0, 0);
-            }
-            else
-            {
-                maxMovesText.color = new Color(0, 0, 0, 1);
-                maxMovesGo.color = new Color(1, 1, 1, 1);
-            }
-
-            if (minMoves == -1)
-            {
-                minMovesGo.color = new Color(0, 0, 0, 0);
-                minMovesRing.color = new Color(0, 0, 0, 0);
-                minMovesRing.fillAmount = 1;
-            }
-            else
-            {
-                minMovesGo.color = new Color(1, 1, 1, 1);
-                minMovesRing.color = minMovesNotReached;
-                minMovesRing.fillAmount = 1f / minMoves;
-            }
+            movesMade = 0;
         }
         
-        private void Update()
+        protected void Update()
         {
-            int maxMovesInt = maxMoves - (int)movesMade;
-            maxMovesText.text = maxMovesInt.ToString();
-            
-            if (maxMoves != -1)
-            {
-                if (maxMoves - movesMade < 0)
-                {
-                    ExplodeBox();
-                }
-            }
-
-            if (minMoves != -1)
-            {
-                if (movesMade < minMoves)
-                {
-                    minMovesRing.fillAmount = 1f / minMoves * movesMade;
-                    minMovesRing.color = minMovesNotReached;
-                }
-                else
-                {
-                    minMovesRing.fillAmount = 1f;
-                    minMovesRing.color = minMovesReached;
-                }
-            }
-
             if (Vector2.Distance(transform.position, destination) > 0.0001f)
             {
                 transform.position = Vector3.MoveTowards(transform.position, destination, player.MoveSpeed * Time.deltaTime);
@@ -141,16 +68,12 @@ namespace ChronoDivergence
 
         public bool isLoadedEnough()
         {
-            if (minMoves != -1)
-            {
-                return movesMade >= minMoves - 1;
-            }
-
             return true;
         }
 
         public bool MoveInDirection(Vector2 direction)
         {
+            Debug.Log("Test!");
             GameObject objectInFront = null;
             int originalLayer = gameObject.layer;
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
@@ -200,12 +123,6 @@ namespace ChronoDivergence
                     .Round(0);
             destination = destination.Round(0);
             DOTween.To(() => movesMade, x => movesMade = x, movesMade + 1, 0.2f);
-        }
-
-        private void ExplodeBox()
-        {
-            //TODO: Make a cool animation or something maybe?
-            gameObject.SetActive(false);
         }
     }
 }
