@@ -29,6 +29,8 @@ namespace ChronoDivergence
         private void Start()
         {
             player = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
+            direction = Vector2.left;
+            UpdateDirection();
         }
 
         private void Update()

@@ -21,6 +21,8 @@ namespace ChronoDivergence
 
         public Vector2 LookingDirection => lookingDirection;
 
+        Vector2 oldInput;
+
         public Vector2 Destination
         {
             get => destination;
@@ -76,6 +78,14 @@ namespace ChronoDivergence
             }
         }
 
+        public void OnUndoStep(InputAction.CallbackContext ctx)
+        {
+            if (ctx.started)
+            {
+                Message.Raise(new UndoStepEvent());
+            }
+        }
+
         /// <summary>
         /// Moves the player through input from the player
         /// </summary>
@@ -96,7 +106,7 @@ namespace ChronoDivergence
 
             if (Vector2.Distance(transform.position, destination) < 0.1f)
             {
-                Move();
+                Move(false);                
             }
         }
         
@@ -105,20 +115,33 @@ namespace ChronoDivergence
         /// </summary>
         /// <param name="direction">(Vector2) direction to move in</param>
         /// <returns>(bool) returns if the move works successful</returns>
-        private bool MoveForced(Vector2 direction)
+        private bool MoveForced(Vector2 direction, bool isUndoing = false)
         {
             checkedOffset = direction;
             lookingDirection = checkedOffset;
-            playerAnim.SetFloat("horizontal", lookingDirection.x);
-            playerAnim.SetFloat("vertical", lookingDirection.y);
-            return Move();
+            if(!isUndoing)
+            {
+                playerAnim.SetFloat("horizontal", lookingDirection.x);
+                playerAnim.SetFloat("vertical", lookingDirection.y);
+            } else {
+                playerAnim.SetFloat("horizontal", -lookingDirection.x);
+                playerAnim.SetFloat("vertical", -lookingDirection.y);
+            }
+            
+            if(!isUndoing)
+            {
+                return Move();
+            } else {
+                return Move(true);
+            }
+            
         }
 
         /// <summary>
         /// Moves the player
         /// </summary>
         /// <returns>(bool) returns if the move works successful</returns>
-        private bool Move()
+        private bool Move(bool isUndoing = false)
         {
             GameObject objectInFront = null;
             Vector2 oldDestination = destination;
@@ -154,7 +177,14 @@ namespace ChronoDivergence
             destination = new Vector3(destination.x + checkedOffset.x,
                 destination.y + checkedOffset.y);
             destination = destination.Round(0);
-            Message.Raise(new PlayerMoveEvent(checkedOffset, destination, oldDestination));
+
+            if(!isUndoing)
+            {
+                if(oldInput != checkedOffset){
+                    Message.Raise(new PlayerMoveEvent(checkedOffset, destination, destination - checkedOffset));
+                }
+            }
+            
             return true;
         }
 
@@ -172,9 +202,13 @@ namespace ChronoDivergence
             return BlockTypes.PLAYER;
         }
 
-        public bool MoveInDirection(Vector2 direction)
+        public bool MoveInDirection(Vector2 direction, bool isUndoing = false)
         {
-            return MoveForced(direction);
+            if(isUndoing){
+                return MoveForced(direction, true);
+            } else {
+                return MoveForced(direction);
+            }
         }
 
         public bool CanBePushedWithOthers()

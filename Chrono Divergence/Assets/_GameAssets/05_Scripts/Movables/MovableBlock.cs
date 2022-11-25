@@ -18,6 +18,12 @@ namespace ChronoDivergence
         protected PlayerMovement player;
         public float movesMade = 0;
 
+        public Vector2 Destination
+        {
+            get => destination;
+            set => destination = value;
+        }
+
         private void OnValidate()
         {
             if (idColor != null && idColorDisplay != null)
@@ -71,9 +77,8 @@ namespace ChronoDivergence
             return true;
         }
 
-        public bool MoveInDirection(Vector2 direction)
+        public bool MoveInDirection(Vector2 direction, bool isUndoing = false)
         {
-            Debug.Log("Test!");
             GameObject objectInFront = null;
             int originalLayer = gameObject.layer;
             gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");
@@ -87,8 +92,17 @@ namespace ChronoDivergence
                             destination.y + direction.y * 0.9f), Vector2.one * 0.9f, 0, collisionLayers).gameObject;
             }
             gameObject.layer = originalLayer;
+
+            if(isUndoing){
+                if(direction != Vector2.zero){
+                    Debug.Log("Moving back");
+                    Move(direction, true);
+                    return true;
+                } else {
+                    return false;
+                }
+            }
         
-            Debug.Log("Checking if Object is in front...");
             if (objectInFront && objectInFront != this.gameObject)
             {
                 Debug.Log("Object is in front: " + objectInFront.name);
@@ -116,13 +130,18 @@ namespace ChronoDivergence
             return false;
         }
 
-        private void Move(Vector2 direction)
+        private void Move(Vector2 direction, bool isUndoing = false)
         {
             destination =
                 new Vector2(destination.x + direction.x, destination.y + direction.y)
                     .Round(0);
             destination = destination.Round(0);
-            DOTween.To(() => movesMade, x => movesMade = x, movesMade + 1, 0.2f);
+            if(!isUndoing)
+            {
+                DOTween.To(() => movesMade, x => movesMade = x, movesMade + 1, 0.2f);
+            } else {
+                DOTween.To(() => movesMade, x => movesMade = x, movesMade - 1, 0.2f);
+            }
         }
     }
 }

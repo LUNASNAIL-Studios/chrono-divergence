@@ -44,7 +44,6 @@ namespace ChronoDivergence
             {
                 mainSpriteRenderer.sprite = destructionStates[destructImageId];
             }
-
         }
         
         private void Update()
@@ -71,6 +70,8 @@ namespace ChronoDivergence
                 if (maxMoves - movesMade <= 0)
                 {
                     ExplodeBox();
+                } else {
+                    ReturnBox();
                 }
             }
 
@@ -78,8 +79,6 @@ namespace ChronoDivergence
             {
                 transform.position = Vector3.MoveTowards(transform.position, destination, player.MoveSpeed * Time.deltaTime);
             }
-            
-            
         }
 
         private void ExplodeBox()
@@ -91,6 +90,16 @@ namespace ChronoDivergence
             laserBlocker.enabled = false;
             maxMovesText.enabled = false;
             idColorDisplay.enabled = false;
+        }
+
+        private void ReturnBox()
+        {
+            //TODO: Make a cool animation or something maybe?
+            shadowCaster.castsShadows = true;
+            collider.enabled = true;
+            laserBlocker.enabled = true;
+            maxMovesText.enabled = true;
+            idColorDisplay.enabled = true;
         }
     }
 }

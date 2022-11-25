@@ -4,6 +4,8 @@ namespace ChronoDivergence
 {
     public interface IMovable
     {
+        Vector2 Destination { get; set; }
+        
         /// <summary>
         /// Gets the movable direction of the IMovable
         /// </summary>
@@ -21,7 +23,7 @@ namespace ChronoDivergence
         /// </summary>
         /// <param name="direction"></param>
         /// <returns>(bool) returns if the move works successfully</returns>
-        bool MoveInDirection(Vector2 direction);
+        bool MoveInDirection(Vector2 direction, bool isUndoing = false);
         
         /// <summary>
         /// Returns if the IMovable can be pushed with others

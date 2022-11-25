@@ -8,13 +8,13 @@ namespace ChronoDivergence
     public class FloorButton : MonoBehaviour, IActivatable
     {
 
-        [SerializeField] private bool isActivated;
-        [SerializeField] private bool isActivatable;
-        [SerializeField] private string requiredBlockID = "";
-        [SerializeField] private ActivatorTypes[] activatingThings;
-        [SerializeField] private UnityEvent OnActivation;
-        [SerializeField] private UnityEvent OnDeactivation;
-        [SerializeField] private TMP_Text idText;
+        [SerializeField] protected bool isActivated;
+        [SerializeField] protected bool isActivatable;
+        [SerializeField] protected string requiredBlockID = "";
+        [SerializeField] protected ActivatorTypes[] activatingThings;
+        [SerializeField] protected UnityEvent OnActivation;
+        [SerializeField] protected UnityEvent OnDeactivation;
+        [SerializeField] protected TMP_Text idText;
 
         private void Start()
         {
@@ -65,13 +65,13 @@ namespace ChronoDivergence
             }
         }
         
-        private void ActivateButton()
+        protected void ActivateButton()
         {
             isActivated = true;
             OnActivation.Invoke();
         }
         
-        private void DeActivateButton()
+        protected void DeActivateButton()
         {
             isActivated = false;
             OnDeactivation.Invoke();
