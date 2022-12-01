@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4512dbcade0e6cf41af8539ea989e144, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 4506644590005009247}
   - component: {fileID: 5514119855405488950}
   - component: {fileID: 697887639996131616}
+  - component: {fileID: 3109027353441748332}
   m_Layer: 0
   m_Name: MovableBlock_Uto_normal
   m_TagString: Untagged
@@ -232,7 +233,21 @@ MonoBehaviour:
   - {x: 0.21762612, y: -0.4685191, z: 0}
   m_ShapePathHash: 1752793056
   m_Mesh: {fileID: 0}
-  m_InstanceId: 42362
+  m_InstanceId: 100962
+--- !u!114 &3109027353441748332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506644590005009218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff39b97dec56cb144a333a684970c5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  history: []
+  objectToLog: {fileID: 4506644590005009218}
 --- !u!1 &4962486382377875385
 GameObject:
   m_ObjectHideFlags: 0

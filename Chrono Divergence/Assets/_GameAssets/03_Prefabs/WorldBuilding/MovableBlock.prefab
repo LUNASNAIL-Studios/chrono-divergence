@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 4506644590005009247}
   - component: {fileID: 5514119855405488950}
   - component: {fileID: 697887639996131616}
+  - component: {fileID: 6377641657257262683}
   m_Layer: 0
   m_Name: MovableBlock
   m_TagString: Untagged
@@ -301,16 +302,11 @@ MonoBehaviour:
   collisionLayers:
     serializedVersion: 2
     m_Bits: 9
-  maxMoves: -1
-  minMoves: -1
-  maxMovesText: {fileID: 2077692364688168453}
-  idText: {fileID: 4857992492094894817}
-  minMovesRing: {fileID: 3591911880822838090}
-  maxMovesGo: {fileID: 5464205414939563172}
-  minMovesGo: {fileID: 6725086575069446131}
-  idGo: {fileID: 3510784099390024633}
-  minMovesNotReached: {r: 1, g: 0.6316455, b: 0, a: 1}
-  minMovesReached: {r: 0.15972686, g: 1, b: 0, a: 1}
+  idColor: {r: 0, g: 0, b: 0, a: 0}
+  idIcon: {fileID: 0}
+  idColorDisplay: {fileID: 0}
+  mainSpriteRenderer: {fileID: 0}
+  movesMade: 0
 --- !u!61 &4506644590005009247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -384,7 +380,21 @@ MonoBehaviour:
   - {x: 0.4, y: -0.4, z: 0}
   m_ShapePathHash: 1376587873
   m_Mesh: {fileID: 0}
-  m_InstanceId: 68010
+  m_InstanceId: 101686
+--- !u!114 &6377641657257262683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506644590005009218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff39b97dec56cb144a333a684970c5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  history: []
+  objectToLog: {fileID: 4506644590005009218}
 --- !u!1 &4806617874628418638
 GameObject:
   m_ObjectHideFlags: 0

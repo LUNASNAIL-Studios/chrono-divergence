@@ -17,6 +17,7 @@ namespace ChronoDivergence.Events
             this.direction = direction;
             this.newPosition = newPosition;
             this.oldPosition = oldPosition;
+            Debug.Log("PlayerMoveEvent");
         }
     }
 }
