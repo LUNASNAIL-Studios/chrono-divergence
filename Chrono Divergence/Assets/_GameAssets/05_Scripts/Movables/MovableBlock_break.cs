@@ -48,8 +48,10 @@ namespace ChronoDivergence
         
         private void Update()
         {
-            int maxMovesInt = maxMoves - (int)movesMade;
-            maxMovesText.text = maxMovesInt.ToString();
+            if(maxMovesText != null){
+                int maxMovesInt = maxMoves - (int)movesMade;
+                maxMovesText.text = maxMovesInt.ToString();
+            }
             
             float statesPerMove = destructionStates.Length / maxMoves;
             int destructImageId = (int)(statesPerMove * movesMade + 1);
@@ -88,7 +90,8 @@ namespace ChronoDivergence
             shadowCaster.castsShadows = false;
             collider.enabled = false;
             laserBlocker.enabled = false;
-            maxMovesText.enabled = false;
+            if(maxMovesText != null)
+                maxMovesText.enabled = false;
             idColorDisplay.enabled = false;
         }
 
@@ -98,7 +101,8 @@ namespace ChronoDivergence
             shadowCaster.castsShadows = true;
             collider.enabled = true;
             laserBlocker.enabled = true;
-            maxMovesText.enabled = true;
+            if(maxMovesText != null)
+                maxMovesText.enabled = true;
             idColorDisplay.enabled = true;
         }
     }

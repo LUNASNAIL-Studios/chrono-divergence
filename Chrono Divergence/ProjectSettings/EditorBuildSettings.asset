@@ -9,48 +9,48 @@ EditorBuildSettings:
     path: Assets/_GameAssets/01_Scenes/LevelOverview.unity
     guid: 39f83a266e2ef1748b72b596a257c815
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 1.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 1 (TL1).unity
     guid: 62fb4e3c816092142a327f52a83cec62
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 2.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 7 (TL2).unity
     guid: a02b8088d9b1612408761b43f8bdb75a
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 3.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 2 (TL3).unity
     guid: 2dcc4d4df85473047bd994b9b4e275a9
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 4.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 3 (TL4).unity
     guid: 990ee21d95f34fe4da1b645614d0e750
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 5.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 4 (TL5).unity
     guid: 4aa472063c89bae478a55202b6cced13
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 6 PostApo.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 5 (TL6).unity
     guid: 7a70e6e3419317943b6777ad88188f25
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 7.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 6 (TL7).unity
     guid: 2fee28b4e7400e54882872e865b02420
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 8 u 9.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 8 (TL8u9).unity
     guid: c9f118cf6f53dbe41bb34aed90f23e38
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 11.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 9 (TL11).unity
     guid: cc1b2712d3993f04b9931071bfeb0045
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 12.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 10 (TL12).unity
     guid: cccb045f91323744995640d4001858e1
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 13.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 12 (TL13).unity
     guid: 3a3b6430b0f800d4685a742cc2f0dcdd
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 14.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 11 (TL14).unity
     guid: cb8a0ad55bf48b04384f3bcb887207b8
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 15.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 13 (TL15).unity
     guid: 71390e6e1e2ac9b4092ae01569266942
   - enabled: 1
     path: Assets/_GameAssets/01_Scenes/Levels/Test Level 16.unity
     guid: eafe70c2fc32df74ba33a65e8ffbb447
   - enabled: 1
-    path: Assets/_GameAssets/01_Scenes/Levels/Test Level 17.unity
+    path: Assets/_GameAssets/01_Scenes/Levels/Level 14 (TL17).unity
     guid: b230446f6219f424cb2d0b71cc830baf
   m_configObjects: {}
