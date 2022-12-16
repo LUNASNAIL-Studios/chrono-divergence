@@ -409,7 +409,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -430,7 +430,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -438,6 +438,132 @@ TextureImporter:
       bones: []
       spriteID: b1faae88f46a30c4aa94d10346107573
       internalID: 1679370966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Wand_StahlSchrauben_TileSet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac77a49f78c8314896f2d521cbc296b
+      internalID: -804840249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Wand_StahlSchrauben_TileSet_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f3f1e9e62641a4ea200431b44ab4ee
+      internalID: -2064426334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Wand_StahlSchrauben_TileSet_17
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7dd28386cdb1b54a88620e6be226131
+      internalID: 1271591497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Wand_StahlSchrauben_TileSet_18
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c95142eb88d99d48bda5839940c3bbb
+      internalID: -1495170629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Wand_StahlSchrauben_TileSet_19
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e224099286b5245931cbf865f207e2
+      internalID: -955368005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: P_Wand_StahlSchrauben_TileSet_20
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2056db9cfc1bdfc40a572fbcbf28a76b
+      internalID: -587937466
       vertices: []
       indices: 
       edges: []
@@ -459,15 +585,21 @@ TextureImporter:
       P_Wand_StahlSchrauben_TileSet_0: 496025834
       P_Wand_StahlSchrauben_TileSet_13: -1823193049
       P_Wand_StahlSchrauben_TileSet_11: 1881317980
+      P_Wand_StahlSchrauben_TileSet_17: 1271591497
+      P_Wand_StahlSchrauben_TileSet_19: -955368005
       P_Wand_StahlSchrauben_TileSet_7: -873830517
+      P_Wand_StahlSchrauben_TileSet_18: -1495170629
       P_Wand_StahlSchrauben_TileSet_3: 1428381698
+      P_Wand_StahlSchrauben_TileSet_16: -2064426334
       P_Wand_StahlSchrauben_TileSet_4: 792296376
       P_Wand_StahlSchrauben_TileSet_9: 268131188
       P_Wand_StahlSchrauben_TileSet_14: 1679370966
+      P_Wand_StahlSchrauben_TileSet_20: -587937466
       P_Wand_StahlSchrauben_TileSet_8: 150242575
       P_Wand_StahlSchrauben_TileSet_10: 592764512
       P_Wand_StahlSchrauben_TileSet_1: -1066537672
       P_Wand_StahlSchrauben_TileSet_2: -596461823
+      P_Wand_StahlSchrauben_TileSet_15: -804840249
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
