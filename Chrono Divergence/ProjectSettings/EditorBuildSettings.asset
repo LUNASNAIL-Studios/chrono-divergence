@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_GameAssets/01_Scenes/ControlScene.unity
+    guid: de4434d1cd625eb4dae1fdc064f7d4b3
+  - enabled: 1
     path: Assets/_GameAssets/01_Scenes/LevelOverview.unity
     guid: 39f83a266e2ef1748b72b596a257c815
   - enabled: 1
@@ -53,4 +56,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GameAssets/01_Scenes/Levels/Level 14 (TL17).unity
     guid: b230446f6219f424cb2d0b71cc830baf
+  - enabled: 1
+    path: Assets/_GameAssets/01_Scenes/Levels/NewYears.unity
+    guid: 7fcfd5f2c63757449b04a09e281dff54
   m_configObjects: {}

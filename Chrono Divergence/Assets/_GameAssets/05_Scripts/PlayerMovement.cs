@@ -12,7 +12,7 @@ namespace ChronoDivergence
         [SerializeField] private Vector2 destination;
         [SerializeField] private LayerMask collisionLayers;
         [SerializeField] private Animator playerAnim;
-        private bool canMoveByInput;
+        [SerializeField] private bool canMoveByInput;
         private Vector2 checkedOffset;
         private IActivatable targetedActivatable;
         private Vector2 lookingDirection;
@@ -72,6 +72,10 @@ namespace ChronoDivergence
 
         public void OnInteract(InputAction.CallbackContext ctx)
         {
+            if(!canMoveByInput){
+                return;
+            }
+
             if (ctx.started)
             {
                 Message.Raise(new PlayerInteractEvent(lookingDirection, destination));
@@ -80,6 +84,10 @@ namespace ChronoDivergence
 
         public void OnUndoStep(InputAction.CallbackContext ctx)
         {
+            if(!canMoveByInput){
+                return;
+            }
+
             if (ctx.started)
             {
                 Message.Raise(new UndoStepEvent());
@@ -91,7 +99,10 @@ namespace ChronoDivergence
         /// </summary>
         private void MoveByInput()
         {
-           
+            if(!canMoveByInput){
+                return;
+            }
+
             checkedOffset = playerInput.Player.Move.ReadValue<Vector2>().normalized;
             if (checkedOffset != Vector2.zero)
             {

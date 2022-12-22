@@ -18,12 +18,16 @@ namespace ChronoDivergence
 
         private void Start()
         {
-            idText.text = requiredBlockID;
+            if(idText != null) {
+                idText.text = requiredBlockID;
+            }
         }
 
         private void OnValidate()
         {
-            idText.text = requiredBlockID;
+            if(idText != null) {
+                idText.text = requiredBlockID;
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)

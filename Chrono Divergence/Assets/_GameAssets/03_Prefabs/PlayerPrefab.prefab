@@ -1775,6 +1775,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 51
   playerAnim: {fileID: 1581341477002388508}
+  canMoveByInput: 1
 --- !u!212 &571620754180544113
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2409,7 +2410,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: afce6a3f00000000c192b230
