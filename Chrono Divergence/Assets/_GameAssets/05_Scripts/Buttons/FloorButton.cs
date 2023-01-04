@@ -14,20 +14,13 @@ namespace ChronoDivergence
         [SerializeField] protected ActivatorTypes[] activatingThings;
         [SerializeField] protected UnityEvent OnActivation;
         [SerializeField] protected UnityEvent OnDeactivation;
-        [SerializeField] protected TMP_Text idText;
 
         private void Start()
         {
-            if(idText != null) {
-                idText.text = requiredBlockID;
-            }
         }
 
         private void OnValidate()
         {
-            if(idText != null) {
-                idText.text = requiredBlockID;
-            }
         }
 
         private void OnTriggerEnter2D(Collider2D other)

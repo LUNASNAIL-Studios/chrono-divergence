@@ -13,8 +13,9 @@ namespace ChronoDivergence
         [SerializeField] private bool isActivated;
         [SerializeField] private bool isActivatable;
         [Header("Nicht verändern:")]
-        [SerializeField] private Animator anim;
         [SerializeField] private SpriteRenderer spriteRenderer;
+        [SerializeField] private Sprite spriteON;
+        [SerializeField] private Sprite spriteOFF;
         [SerializeField] private Vector2 direction;
         [SerializeField] [Range(0,5)] private float cooldownDuration;
         private PlayerMovement player;
@@ -103,7 +104,11 @@ namespace ChronoDivergence
                 {
                     OnDeactivation.Invoke();
                 }
-                anim.SetBool("activated", isActivated);
+                if(isActivated){
+                    spriteRenderer.sprite = spriteON;
+                } else {
+                    spriteRenderer.sprite = spriteOFF;
+                }
                 leverCooldown = cooldownDuration;
             }
         }
@@ -113,14 +118,14 @@ namespace ChronoDivergence
             if (player.Destination == (Vector2)gameObject.transform.position)
             {
                 player.TargetedActivatable = this;
-                anim.SetBool("targeted", true);
+                spriteRenderer.color = Color.yellow;
             }
             else
             {
                 if ((Lever)player.TargetedActivatable == this)
                 {
                     player.TargetedActivatable = null;
-                    anim.SetBool("targeted", false);
+                    spriteRenderer.color = Color.white;
                 }
             }
         }

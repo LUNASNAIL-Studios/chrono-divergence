@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 117510475317157422}
   - component: {fileID: 117510475317157423}
   m_Layer: 2
-  m_Name: FloorButton_PostApo_break
+  m_Name: FloorButton_PostApo_charge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ SpriteRenderer:
   m_SortingLayerID: 1063964335
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 024a50afeb1ee494e898be749774f06d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 002844c141202054a82e8745308df494, type: 3}
   m_Color: {r: 1, g: 0.9490196, b: 0.42745098, a: 1}
   m_FlipX: 0
   m_FlipY: 0

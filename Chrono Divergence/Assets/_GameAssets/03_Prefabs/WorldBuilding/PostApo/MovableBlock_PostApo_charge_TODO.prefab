@@ -667,13 +667,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5528398891363223823}
-  - component: {fileID: 6182321923717381645}
+  - component: {fileID: 2217503029138679697}
   - component: {fileID: 5528398891363223820}
   - component: {fileID: 4518260703356660069}
   - component: {fileID: 8907387774092155763}
   - component: {fileID: 4518260703356660070}
   m_Layer: 0
-  m_Name: MovableBlock_PostApo_break
+  m_Name: MovableBlock_PostApo_charge_TODO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -700,7 +700,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6182321923717381645
+--- !u!114 &2217503029138679697
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -709,35 +709,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 5528398891363223825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb827185f04e4625a13042ec92b77cb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3340af041c88430cb02d29fef9eb8e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   blockID: 
   collisionLayers:
     serializedVersion: 2
     m_Bits: 9
-  idColor: {r: 0.7371911, g: 1, b: 0, a: 1}
+  idColor: {r: 0.8941176, g: 1, b: 0, a: 1}
   idIcon: {fileID: 0}
   idColorDisplay: {fileID: 8393511371739813459}
   mainSpriteRenderer: {fileID: 8393511371739813459}
   movesMade: 0
-  maxMoves: 5
-  maxMovesText: {fileID: 0}
-  destructionStates:
-  - {fileID: 21300000, guid: 5cdb1894bbe76964aa866715c6fdab61, type: 3}
-  - {fileID: 21300000, guid: c5e9034e277ba2b48a744161beb98a79, type: 3}
-  - {fileID: 21300000, guid: 56dbada661f33044cbb60b28482e15c4, type: 3}
-  - {fileID: 21300000, guid: f4f26c15eecb55146a57e1915719568b, type: 3}
-  - {fileID: 21300000, guid: 6023864d2fb19c54a98667cf73218ed4, type: 3}
-  - {fileID: 21300000, guid: c437bf63cfed3444ea93013c29c970e1, type: 3}
-  - {fileID: 21300000, guid: a3293b84147275c47b4a042a92bc6da4, type: 3}
-  - {fileID: 21300000, guid: f8fa4414c28436f4694e339a1e58af08, type: 3}
-  - {fileID: 21300000, guid: 8dc2034933a05384cb4a6a4caa03cb02, type: 3}
-  - {fileID: 21300000, guid: 3e4712c0c6e349548977115097d19906, type: 3}
-  - {fileID: 21300000, guid: 260efcbc64cf5484cb421e1b86b03e6e, type: 3}
-  blockcollider: {fileID: 0}
-  laserBlocker: {fileID: 1940068742218824928}
-  shadowCaster: {fileID: 8907387774092155763}
+  minMoves: 5
+  chargeDisplay: {fileID: 0}
+  minMovesNotReached: {r: 0, g: 0, b: 0, a: 0}
+  minMovesReached: {r: 0, g: 0, b: 0, a: 0}
 --- !u!61 &5528398891363223820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -811,7 +798,7 @@ MonoBehaviour:
   - {x: -0.35364094, y: -0.46672237, z: 0}
   m_ShapePathHash: 392939102
   m_Mesh: {fileID: 0}
-  m_InstanceId: 31996
+  m_InstanceId: 36798
 --- !u!114 &4518260703356660070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,7 +887,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 5cdb1894bbe76964aa866715c6fdab61, type: 3}
-  m_Color: {r: 0.7371911, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.8941176, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

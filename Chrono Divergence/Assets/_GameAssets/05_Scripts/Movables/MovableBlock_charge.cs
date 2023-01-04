@@ -28,7 +28,7 @@ namespace ChronoDivergence
             }
         }
         
-        private void Update()
+        new private void Update()
         {
             if (minMoves != -1)
             {
@@ -50,7 +50,7 @@ namespace ChronoDivergence
             }
         }
 
-        public bool isLoadedEnough()
+        new public bool isLoadedEnough()
         {
             if (minMoves != -1)
             {

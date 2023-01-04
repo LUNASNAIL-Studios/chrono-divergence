@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4908428025638751332
 Transform:
   m_ObjectHideFlags: 0
@@ -157,8 +157,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 28ab06595b2a44e4f8a96e1a5714f8a8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: efd61c9ff7bcd0147a3fdfc453b7d992, type: 3}
+  m_Color: {r: 0.47283977, g: 1, b: 0.17647058, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -185,7 +185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3262781537883594332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -301,24 +301,28 @@ MonoBehaviour:
   collisionLayers:
     serializedVersion: 2
     m_Bits: 9
-  idColor: {r: 0, g: 0, b: 0, a: 0}
+  idColor: {r: 0.47283977, g: 1, b: 0.17647058, a: 1}
   idIcon: {fileID: 0}
-  idColorDisplay: {fileID: 0}
+  idColorDisplay: {fileID: 453103243958002688}
+  mainSpriteRenderer: {fileID: 453103243958002688}
   movesMade: 0
-  blockID: 
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 0
   maxMoves: -1
-  minMoves: -1
   maxMovesText: {fileID: 0}
-  idText: {fileID: 0}
-  chargeDisplay: {fileID: 0}
-  maxMovesGo: {fileID: 0}
-  minMovesGo: {fileID: 0}
-  idGo: {fileID: 0}
-  minMovesNotReached: {r: 0, g: 0, b: 0, a: 0}
-  minMovesReached: {r: 0, g: 0, b: 0, a: 0}
+  destructionStates:
+  - {fileID: 21300000, guid: efd61c9ff7bcd0147a3fdfc453b7d992, type: 3}
+  - {fileID: 21300000, guid: 4697ba923cfdbcc4796ffbbb49e930b6, type: 3}
+  - {fileID: 21300000, guid: ee8a98de1228f484ba39f6b12fd72ae8, type: 3}
+  - {fileID: 21300000, guid: 3e7075700f19e2f48a0232fbe573379a, type: 3}
+  - {fileID: 21300000, guid: efcda3618f02ed848b1b868c9a4c06bd, type: 3}
+  - {fileID: 21300000, guid: 5f4a434e2d26ebf4b8afa0a80834452a, type: 3}
+  - {fileID: 21300000, guid: 250ea70f6185c574cbc726b0dff13a6d, type: 3}
+  - {fileID: 21300000, guid: ced8fd5de48a18d47bce186e827cf12d, type: 3}
+  - {fileID: 21300000, guid: c458a3a2d72816043862eb6ea7a8f3a7, type: 3}
+  - {fileID: 21300000, guid: 24ceb647045dbfb48a0bfff10c3ecbde, type: 3}
+  - {fileID: 21300000, guid: a23dc61bbe6bf6b4aa3934ce9691c735, type: 3}
+  blockcollider: {fileID: 4506644590005009247}
+  laserBlocker: {fileID: 7556621111140273843}
+  shadowCaster: {fileID: 697887639996131616}
 --- !u!61 &4506644590005009247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -404,7 +408,7 @@ MonoBehaviour:
   - {x: -0.28480002, y: -0.45748767, z: 0}
   m_ShapePathHash: 1349404874
   m_Mesh: {fileID: 0}
-  m_InstanceId: 58796
+  m_InstanceId: 43990
 --- !u!1 &4806617874628418638
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,7 +731,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &594905687394616257
 RectTransform:
   m_ObjectHideFlags: 0

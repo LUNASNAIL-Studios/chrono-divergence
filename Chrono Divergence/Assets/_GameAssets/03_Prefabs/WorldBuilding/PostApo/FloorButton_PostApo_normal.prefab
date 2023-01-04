@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 117510475317157409}
-  - component: {fileID: 117510475317157420}
+  - component: {fileID: 2153297614197182414}
   - component: {fileID: 117510475317157422}
   - component: {fileID: 117510475317157423}
   m_Layer: 2
-  m_Name: FloorButton_PostApo_break
+  m_Name: FloorButton_PostApo_normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &117510475317157420
+--- !u!114 &2153297614197182414
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,12 +43,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 117510475317157421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e92314a275d478681eecb844b02797f, type: 3}
+  m_Script: {fileID: 11500000, guid: 651de3e5cd8e48744b94f96795a1f55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isActivated: 0
   isActivatable: 1
-  requiredBlockID: 7
+  requiredBlockID: 
   activatingThings: 03000000
   OnActivation:
     m_PersistentCalls:
@@ -97,7 +97,7 @@ SpriteRenderer:
   m_SortingLayerID: 1063964335
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 024a50afeb1ee494e898be749774f06d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 39864260091aae542b717c34d819d037, type: 3}
   m_Color: {r: 1, g: 0.9490196, b: 0.42745098, a: 1}
   m_FlipX: 0
   m_FlipY: 0

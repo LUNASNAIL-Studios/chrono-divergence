@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 8225171524717835607}
   - component: {fileID: 2525155705114157612}
   m_Layer: 0
-  m_Name: MovableBlock_PostApo_standard
+  m_Name: MovableBlock_PostApo_normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

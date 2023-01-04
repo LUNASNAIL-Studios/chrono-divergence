@@ -13,7 +13,7 @@ namespace ChronoDivergence
         [Header("Dont change:")]
         [SerializeField] private TMP_Text maxMovesText;
         [SerializeField] private Sprite[] destructionStates;
-        [SerializeField] private Collider2D collider;
+        [SerializeField] private Collider2D blockcollider;
         [SerializeField] private Collider2D laserBlocker;
         [SerializeField] private ShadowCaster2D shadowCaster;
         
@@ -46,7 +46,7 @@ namespace ChronoDivergence
             }
         }
         
-        private void Update()
+        new private void Update()
         {
             if(maxMovesText != null){
                 int maxMovesInt = maxMoves - (int)movesMade;
@@ -88,7 +88,7 @@ namespace ChronoDivergence
             //TODO: Make a cool animation or something maybe?
             mainSpriteRenderer.sprite = destructionStates[destructionStates.Length - 1];
             shadowCaster.castsShadows = false;
-            collider.enabled = false;
+            blockcollider.enabled = false;
             laserBlocker.enabled = false;
             if(maxMovesText != null)
                 maxMovesText.enabled = false;
@@ -99,7 +99,7 @@ namespace ChronoDivergence
         {
             //TODO: Make a cool animation or something maybe?
             shadowCaster.castsShadows = true;
-            collider.enabled = true;
+            blockcollider.enabled = true;
             laserBlocker.enabled = true;
             if(maxMovesText != null)
                 maxMovesText.enabled = true;
