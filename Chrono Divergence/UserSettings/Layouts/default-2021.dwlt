@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 96
+  controlID: 38
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -493,23 +493,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_GameAssets
+    - Assets/_GameAssets/02_Art/Level/Deco/PostApo
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/_GameAssets
+  - Assets/_GameAssets/02_Art/Level/Deco/PostApo
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\DELL\Desktop\ChronoDivergence\chrono-divergence\Chrono
     Divergence
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 94.20001}
-    m_SelectedIDs: 6a7e0000
-    m_LastClickedID: 32362
-    m_ExpandedIDs: 000000004e7e00006a7e0000a67e0000ba7e0000c67e0000c87e000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 4a770000
+    m_LastClickedID: 30538
+    m_ExpandedIDs: 0000000060760000fa76000008770000347700004077000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -537,7 +537,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004e7e0000
+    m_ExpandedIDs: 0000000060760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -568,18 +568,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300002c3700009c730000048c0000769b0000bcb30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Dystopy
-      m_OriginalName: Dystopy
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 32462
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
@@ -589,7 +589,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 289.2}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -665,9 +665,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 8c770000
       m_LastClickedID: 0
-      m_ExpandedIDs: 06f7ffff
+      m_ExpandedIDs: 08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
