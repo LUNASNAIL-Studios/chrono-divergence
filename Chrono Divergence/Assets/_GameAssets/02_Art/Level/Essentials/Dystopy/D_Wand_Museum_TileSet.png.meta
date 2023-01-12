@@ -547,6 +547,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: D_Wand_Museum_TileSet_6
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2560
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439c4c369506432449dea64d554d5636
+      internalID: 777087377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -558,7 +579,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      D_Wand_Museum_TileSet_35: -1667076637
+      D_Wand_Museum_TileSet_16: 1020868497
       D_Wand_Museum_TileSet_0: -1940656983
       D_Wand_Museum_TileSet_38: 627746205
       D_Wand_Museum_TileSet_21: 908236450
@@ -601,7 +622,7 @@ TextureImporter:
       D_Wand_Museum_TileSet_9: -882572034
       D_Wand_Museum_TileSet_14: -519471625
       D_Wand_Museum_TileSet_20: 1471253989
-      D_Wand_Museum_TileSet_16: 1020868497
+      D_Wand_Museum_TileSet_35: -1667076637
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

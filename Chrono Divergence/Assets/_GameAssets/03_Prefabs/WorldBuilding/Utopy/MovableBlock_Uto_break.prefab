@@ -245,7 +245,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1366a57c164851b47826712d310003fc, type: 3}
   - {fileID: 21300000, guid: d852d8f36c3e3364180c08d61f9c6907, type: 3}
   - {fileID: 21300000, guid: 56c5648d64d9c6e4fb57a37561d68697, type: 3}
-  blockcollider: {fileID: 0}
+  blockcollider: {fileID: 4506644590005009247}
   laserBlocker: {fileID: 7556621111140273843}
   shadowCaster: {fileID: 697887639996131616}
 --- !u!61 &4506644590005009247
@@ -329,7 +329,7 @@ MonoBehaviour:
   - {x: -0.2180195, y: -0.46910173, z: 0}
   m_ShapePathHash: 1866469858
   m_Mesh: {fileID: 0}
-  m_InstanceId: 38742
+  m_InstanceId: 50432
 --- !u!114 &8622448627946759296
 MonoBehaviour:
   m_ObjectHideFlags: 0
