@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using ChronoDivergence.Events;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,8 @@ namespace ChronoDivergence
         [SerializeField] private LayerMask collisionLayers;
         [SerializeField] private Animator playerAnim;
         [SerializeField] private bool canMoveByInput;
+        [SerializeField] private CinemachineVirtualCamera cameraStandard;
+        [SerializeField] private CinemachineVirtualCamera cameraZoomOut;
         private Vector2 checkedOffset;
         private IActivatable targetedActivatable;
         private Vector2 lookingDirection;
@@ -91,6 +94,19 @@ namespace ChronoDivergence
             if (ctx.started)
             {
                 Message.Raise(new UndoStepEvent());
+            }
+        }
+        
+        public void OnZoom(InputAction.CallbackContext ctx)
+        {
+            if (ctx.started)
+            {
+                cameraStandard.Priority = 0;
+                cameraZoomOut.Priority = 10;
+            } else if (ctx.canceled)
+            {
+                cameraStandard.Priority = 10;
+                cameraZoomOut.Priority = 0;
             }
         }
 

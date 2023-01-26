@@ -15,5 +15,10 @@ namespace ChronoDivergence
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
+        public void ZoomLevel()
+        {
+            GameObject.FindWithTag("Player");
+        }
     }
 }
