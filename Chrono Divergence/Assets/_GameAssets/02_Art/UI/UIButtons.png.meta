@@ -43,8 +43,8 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
-  spriteMeshType: 1
+  spriteExtrude: 0
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 512
@@ -66,10 +66,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -132,7 +132,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1536
+        y: 2048
         width: 512
         height: 512
       alignment: 0
@@ -153,7 +153,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 1536
+        y: 2048
         width: 512
         height: 512
       alignment: 0
@@ -173,7 +173,7 @@ TextureImporter:
       name: Button_Menu_Hover
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 0
         y: 1536
         width: 512
         height: 512
@@ -194,7 +194,7 @@ TextureImporter:
       name: Button_Restart_Hover
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 512
         y: 1536
         width: 512
         height: 512
@@ -404,8 +404,8 @@ TextureImporter:
       name: Button_Close_Pressed
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 3584
+        x: 2048
+        y: 2560
         width: 512
         height: 512
       alignment: 0
@@ -488,8 +488,8 @@ TextureImporter:
       name: Button_Interact_Pressed
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 3072
+        x: 3584
+        y: 3584
         width: 512
         height: 512
       alignment: 0
@@ -556,7 +556,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -577,7 +577,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,12 +593,12 @@ TextureImporter:
       name: Button_Interact_Unpressed
       rect:
         serializedVersion: 2
-        x: 3072
-        y: 1536
+        x: 3584
+        y: 2048
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -619,7 +619,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -640,7 +640,7 @@ TextureImporter:
         width: 512
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -648,6 +648,132 @@ TextureImporter:
       bones: []
       spriteID: 3dc82bf89f0191f4d9e11fd446bf7ded
       internalID: -67457269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Search_Unpressed
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d792aed07fa54448df76780f59fd32
+      internalID: -463275236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Search_Hover
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e155f093bbeb8b54f9eeec3d70b44768
+      internalID: -1048133303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Search_Pressed
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d2e2736c6d7ff44b6604bc386021ce
+      internalID: 1616811844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Back_Pressed
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3584
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eaa2f6731db05741b505f7e0790f08a
+      internalID: 1025575317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Button_Back_Unpressed
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbcb78f362eabe14f8504809bae9a4fd
+      internalID: -1779775703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NavButtons_Center
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a51108c04012549a2399c6c650974c
+      internalID: 981705203
       vertices: []
       indices: 
       edges: []
@@ -669,20 +795,25 @@ TextureImporter:
       Button_Left_Pressed: -1220365077
       Button_Right_Pressed: -671633769
       Button_Down_Pressed: 471637598
+      Button_Search_Unpressed: -463275236
       Button_Menu_Hover: -1714638645
       PanelBackground: -629551106
       UIButtons_12: 1658212290
       Button_Interact_Unpressed: 532547691
       UIButtons_9: -48229012
+      Button_Search_Pressed: 1616811844
       UIButtons_13: -235098432
       Button_Close_Hover: -985978909
       Button_Restart_Unpressed: 1301990805
       Button_Menu_Unpressed: 404017480
+      NavButtons_Center: 981705203
       Button_Down_Unpressed: -67457269
+      Button_Back_Pressed: 1025575317
       Button_Right_Unpressed: -238042798
       UIButtons_11: -715624289
       Speechbubble: -2058614240
       Button_Up_Unpressed: -1589720630
+      Button_Search_Hover: -1048133303
       Button_Interact_Pressed: 1361525449
       Button_Restart_Hover: 723002122
       Button_Menu_Pressed: 1072901671
@@ -690,6 +821,7 @@ TextureImporter:
       Button_Disabled: -1158909528
       Button_Left_Unpressed: 1171309124
       Button_Restart_Pressed: -352723232
+      Button_Back_Unpressed: -1779775703
       Button_Close_Pressed: 2136917938
       Button_Close_Unpressed: -558878700
       Button_Up_Pressed: 346720281
