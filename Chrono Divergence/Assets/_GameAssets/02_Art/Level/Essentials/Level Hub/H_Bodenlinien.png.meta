@@ -590,7 +590,7 @@ TextureImporter:
       name: H_Bodenlinien_23
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 1536
         y: 0
         width: 512
         height: 512
@@ -603,6 +603,27 @@ TextureImporter:
       bones: []
       spriteID: d5f4ed9630b5df040b5b29c29e1b1351
       internalID: 555498419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: H_Bodenlinien_24
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39482675e26e4a4694a904c85c604d9
+      internalID: 439991114
       vertices: []
       indices: 
       edges: []
@@ -636,6 +657,7 @@ TextureImporter:
       H_Bodenlinien_21: 1004950034
       H_Bodenlinien_13: 2114405099
       H_Bodenlinien_23: 555498419
+      H_Bodenlinien_24: 439991114
       H_Bodenlinien_2: -1254553517
       H_Bodenlinien_4: -606737967
       H_Bodenlinien_18: 558187219
