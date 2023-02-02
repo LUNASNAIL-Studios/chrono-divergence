@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: bccb5c800b5a9084eb8df1f34b605274, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
   m_Intensity: 0.25
   m_LightVolumeIntensity: 0.34
   m_LightVolumeIntensityEnabled: 1
@@ -214,7 +214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectedLevel: 0
-  portalColor: {r: 1, g: 0, b: 0, a: 1}
+  colorLevelOff: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  colorLevelAccessible: {r: 0.4716981, g: 0.21137415, b: 0.21934803, a: 1}
+  colorLevelCompleted: {r: 0, g: 0.5883775, b: 1, a: 1}
   levelTitle: 'Level 1
 
     The unknown portal'
