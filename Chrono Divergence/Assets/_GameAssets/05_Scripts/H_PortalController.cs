@@ -11,7 +11,9 @@ public class H_PortalController : MonoBehaviour, IActivatable
 {
     [Header("Change here")]
     [SerializeField] private int connectedLevel;
-    [SerializeField] private Color portalColor;
+    [SerializeField] private Color colorLevelOff;
+    [SerializeField] private Color colorLevelAccessible;
+    [SerializeField] private Color colorLevelCompleted;
     [TextArea(3,10)][SerializeField] private string levelTitle;
     
     [Header("Don't change this:")]
@@ -25,24 +27,28 @@ public class H_PortalController : MonoBehaviour, IActivatable
     [SerializeField] private TMP_Text portalUITitleText;
     [SerializeField] private LevelButton levelButton;
 
-    public Color PortalColor
-    {
-        get => portalColor;
-        set => portalColor = value;
-    }
-
-    public bool IsAccessible
-    {
-        get => isAccessible;
-        set => isAccessible = value;
-    }
+    public Color ColorLevelOff => colorLevelOff;
+    public Color ColorLevelCompleted => colorLevelCompleted;
+    public Color ColorLevelAccessible => colorLevelAccessible;
+    public bool IsAccessible => isAccessible;
+    public bool IsCompleted => isCompleted;
 
     private void OnValidate()
     {
         portalUITitleText.text = levelTitle;
-        portalLightLight.color = portalColor;
-        portalLightRenderer.color = portalColor;
+        
         portalLight.SetActive(isAccessible);
+        if (isCompleted) {
+            portalLightRenderer.color = colorLevelCompleted;
+            portalLightLight.color = colorLevelCompleted;
+        } else if (isAccessible) {
+            portalLightRenderer.color = colorLevelAccessible;
+            portalLightLight.color = colorLevelAccessible;
+        } else {
+            portalLightRenderer.color = colorLevelOff;
+            portalLightLight.color = colorLevelOff;
+        }
+        
         portalUI.SetActive(isAccessible);
         portalInactiveUI.SetActive(!isAccessible);
         levelButton.SetLevel = "Level " + connectedLevel;
@@ -53,21 +59,27 @@ public class H_PortalController : MonoBehaviour, IActivatable
         portalUI.SetActive(false);
         portalInactiveUI.SetActive(false);
         
-        if (connectedLevel > 1)
-        {
+        if (connectedLevel > 1) {
             isAccessible = PlayerPrefs.GetInt("LEVELCOMPLETED_" + (connectedLevel - 1)) == 1;
-        }
-        else
-        {
+        } else {
             isAccessible = true;
         }
 
         isCompleted = PlayerPrefs.GetInt("LEVELCOMPLETED_" + connectedLevel) == 1;
         portalLight.SetActive(isAccessible);
+        
+        if (isCompleted) {
+            portalLightRenderer.color = colorLevelCompleted;
+            portalLightLight.color = colorLevelCompleted;
+        } else if (isAccessible) {
+            portalLightRenderer.color = colorLevelAccessible;
+            portalLightLight.color = colorLevelAccessible;
+        } else {
+            portalLightRenderer.color = colorLevelOff;
+            portalLightLight.color = colorLevelOff;
+        }
 
         portalUITitleText.text = levelTitle;
-        portalLightLight.color = portalColor;
-        portalLightRenderer.color = portalColor;
         levelButton.SetLevel = "Level " + connectedLevel;
     }
 
