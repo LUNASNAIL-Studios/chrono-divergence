@@ -29,10 +29,16 @@ namespace ChronoDivergence
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-
-        public void ZoomLevel()
+        
+        public void QuitGame()
         {
-            GameObject.FindWithTag("Player");
+            Debug.Log("Game has quit!");
+            Application.Quit();
+        }
+
+        public void ClearSaves()
+        {
+            PlayerPrefs.DeleteAll();
         }
     }
 }
