@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4232902293636103482}
   - component: {fileID: 4232902293636103621}
   m_Layer: 3
-  m_Name: Dys_Lever
+  m_Name: D_Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,8 +55,9 @@ MonoBehaviour:
       m_Calls: []
   isActivated: 0
   isActivatable: 1
-  anim: {fileID: 4232902293636103482}
   spriteRenderer: {fileID: 4232902294745542169}
+  spriteON: {fileID: 21300000, guid: 09827fe86f3c23f4d9a258e4cac41ee4, type: 3}
+  spriteOFF: {fileID: 21300000, guid: 539ebdb8be8c2ae419f7b5a65f3bf8c6, type: 3}
   direction: {x: 0, y: -1}
   cooldownDuration: 0.4
 --- !u!95 &4232902293636103482

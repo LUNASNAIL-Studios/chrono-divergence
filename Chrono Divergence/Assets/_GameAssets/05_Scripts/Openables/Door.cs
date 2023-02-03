@@ -7,9 +7,11 @@ namespace ChronoDivergence
         [SerializeField] private Animator anim;
         [SerializeField] private bool isOpen;
         [SerializeField] private bool isInverted;
-        [SerializeField] private bool staysOpen;
         [SerializeField] private bool isActivatable;
         [SerializeField] private GameObject[] neededIActivators;
+        [SerializeField] private Sprite doorOpenSprite;
+        [SerializeField] private Sprite doorClosedSprite;
+        [SerializeField] private SpriteRenderer doorSpriteRenderer;
             
         public bool IsOpened()
         {
@@ -47,12 +49,14 @@ namespace ChronoDivergence
             if (allActive)
             {
                 isOpen = !isInverted;
-                anim.SetBool("IsOpen", !isInverted);
+                //anim.SetBool("IsOpen", !isInverted);
+                doorSpriteRenderer.sprite = doorOpenSprite;
             }
             else
             {
                 isOpen = isInverted;
-                anim.SetBool("IsOpen", isInverted);
+                //anim.SetBool("IsOpen", isInverted);
+                doorSpriteRenderer.sprite = doorClosedSprite;
             }
         }
     }

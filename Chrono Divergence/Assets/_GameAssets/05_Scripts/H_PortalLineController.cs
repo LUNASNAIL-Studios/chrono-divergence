@@ -18,11 +18,11 @@ public class H_PortalLineController : MonoBehaviour
     {
         if (!connectedPortal) return;
         lineRender.sprite = isActive ? lineActive : lineInactive;
-        lineRender.color = connectedPortal.ColorLevelOff;
+        //lineRender.color = connectedPortal.ColorLevelOff;
         if (portalLineLight)
         {
             portalLineLight.gameObject.SetActive(isActive);
-            portalLineLight.color = connectedPortal.ColorLevelOff;
+            //portalLineLight.color = connectedPortal.ColorLevelOff;
         }
     }
 
@@ -33,28 +33,20 @@ public class H_PortalLineController : MonoBehaviour
         
         isActive = connectedPortal.IsAccessible;
         lineRender.sprite = connectedPortal.IsAccessible ? lineActive : lineInactive;
-        lineRender.color = connectedPortal.IsAccessible ? connectedPortal.ColorLevelAccessible : Color.gray;
+        //lineRender.color = connectedPortal.IsAccessible ? connectedPortal.ColorLevelAccessible : Color.gray;
         if(portalLineLight)
         {
             portalLineLight.gameObject.SetActive(isActive);
         }
 
-        if (connectedPortal.IsCompleted)
+        if (connectedPortal.IsAccessible)
         {
             if (portalLineLight)
             {
                 portalLineLight.gameObject.SetActive(true);
                 portalLineLight.color = connectedPortal.ColorLevelCompleted;
             }
-            lineRender.color = connectedPortal.ColorLevelCompleted;
-        } else if (connectedPortal.IsAccessible)
-        {
-            if (portalLineLight)
-            {
-                portalLineLight.gameObject.SetActive(true);
-                portalLineLight.color = connectedPortal.ColorLevelCompleted;
-            }
-            lineRender.color = connectedPortal.ColorLevelCompleted;
+            //lineRender.color = connectedPortal.ColorLevelCompleted;
         }
         else
         {
@@ -63,7 +55,7 @@ public class H_PortalLineController : MonoBehaviour
                 portalLineLight.gameObject.SetActive(false);
                 portalLineLight.color = connectedPortal.ColorLevelOff;
             }
-            lineRender.color = connectedPortal.ColorLevelOff;
+            //lineRender.color = connectedPortal.ColorLevelOff;
         }
     }
 }

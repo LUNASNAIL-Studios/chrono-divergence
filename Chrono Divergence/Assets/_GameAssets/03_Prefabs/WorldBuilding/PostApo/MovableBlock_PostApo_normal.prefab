@@ -639,9 +639,9 @@ MonoBehaviour:
   collisionLayers:
     serializedVersion: 2
     m_Bits: 9
-  idColor: {r: 0, g: 0, b: 0, a: 0}
+  idColor: {r: 1, g: 1, b: 1, a: 1}
   idIcon: {fileID: 0}
-  idColorDisplay: {fileID: 0}
+  idColorDisplay: {fileID: 9062216685332576375}
   mainSpriteRenderer: {fileID: 9062216685332576375}
   movesMade: 0
 --- !u!61 &4972002097907312424
@@ -717,7 +717,7 @@ MonoBehaviour:
   - {x: 0.35553405, y: -0.463438, z: 0}
   m_ShapePathHash: -1992665887
   m_Mesh: {fileID: 0}
-  m_InstanceId: 28972
+  m_InstanceId: 74146
 --- !u!114 &2525155705114157612
 MonoBehaviour:
   m_ObjectHideFlags: 0
