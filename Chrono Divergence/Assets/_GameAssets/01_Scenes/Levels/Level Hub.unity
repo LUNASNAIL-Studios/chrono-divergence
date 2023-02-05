@@ -44397,7 +44397,7 @@ PrefabInstance:
     - target: {fileID: 2604385550192569581, guid: bbb0a39234f2b7b4481c55019a108d0c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1641386553, guid: 6835a6991614abc479fe59848a44cbbf, type: 3}
+      objectReference: {fileID: -1516806912, guid: a8ed8a07e6a81374d9a4389e73044c4b, type: 3}
     - target: {fileID: 3019442734425776406, guid: bbb0a39234f2b7b4481c55019a108d0c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -44444,11 +44444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3285498274376642898, guid: bbb0a39234f2b7b4481c55019a108d0c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7614815686456296247, guid: bbb0a39234f2b7b4481c55019a108d0c, type: 3}
       propertyPath: isActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7614815686456296247, guid: bbb0a39234f2b7b4481c55019a108d0c, type: 3}
       propertyPath: lineActive
@@ -63613,7 +63613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2756766582653795877, guid: 04e5aba12809e4b439583cbf4ac5e1be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.25
+      value: 2.55
       objectReference: {fileID: 0}
     - target: {fileID: 3425610559661142079, guid: 04e5aba12809e4b439583cbf4ac5e1be, type: 3}
       propertyPath: m_RootOrder
@@ -69848,6 +69848,10 @@ PrefabInstance:
       value: 'Level 7
 
         The unknown portal'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756766582653795877, guid: 04e5aba12809e4b439583cbf4ac5e1be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3425610559661142079, guid: 04e5aba12809e4b439583cbf4ac5e1be, type: 3}
       propertyPath: m_RootOrder
