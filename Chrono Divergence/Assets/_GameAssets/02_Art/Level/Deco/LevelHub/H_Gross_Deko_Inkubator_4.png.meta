@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5754e6f55ad7ff84f8f43204b0580966
+guid: 31e71adbb517f994fb7ad8919707811a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Inkubator_3_0
+      name: H_Gross_Deko_Inkubator_4_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 343cf5e9ddf1b2e4cb6a53bb280fb184
-      internalID: -1688078220
+      spriteID: 34f1251cf684d7340864efbefaaf0f67
+      internalID: 797116903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkubator_3_1
+      name: H_Gross_Deko_Inkubator_4_1
       rect:
         serializedVersion: 2
         x: 512
@@ -139,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78b66ea84957eb841b1121e02c30bf56
-      internalID: -817030968
+      spriteID: cf0881ae11a20c84f8501bc46017cbfa
+      internalID: -1447948360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkubator_3_2
+      name: H_Gross_Deko_Inkubator_4_2
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +160,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a4f281f0fbaddb42b51dd186e5b3932
-      internalID: -345368228
+      spriteID: 121bf8f8b0406ce4ea16b29d781d26ae
+      internalID: -769538105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkubator_3_3
+      name: H_Gross_Deko_Inkubator_4_3
       rect:
         serializedVersion: 2
         x: 512
@@ -181,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8862e1819bb24d447b6a4a668b15df52
-      internalID: -2038082918
+      spriteID: e6221db40a4e6404cb9b9eb2db841c1e
+      internalID: -299225689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkubator_3_4
+      name: H_Gross_Deko_Inkubator_4_4
       rect:
         serializedVersion: 2
         x: 0
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98d8e42a33d2aad43a7aebfa42f9a630
-      internalID: 1392409581
+      spriteID: e94fd2e138d84584d8d5cb28c78b68c6
+      internalID: -358250720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkubator_3_5
+      name: H_Gross_Deko_Inkubator_4_5
       rect:
         serializedVersion: 2
         x: 512
@@ -223,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 218fbb05fc1c65f48b63736a44acb231
-      internalID: -1027912767
+      spriteID: f03ac7a985756cb499e506e1d56b13a3
+      internalID: 1321048787
       vertices: []
       indices: 
       edges: []
@@ -240,12 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Inkubator_3_1: -817030968
-      Inkubator_3_3: -2038082918
-      Inkubator_3_0: -1688078220
-      Inkubator_3_5: -1027912767
-      Inkubator_3_2: -345368228
-      Inkubator_3_4: 1392409581
+      H_Gross_Deko_Inkubator_4_5: 1321048787
+      H_Gross_Deko_Inkubator_4_2: -769538105
+      H_Gross_Deko_Inkubator_4_3: -299225689
+      H_Gross_Deko_Inkubator_4_0: 797116903
+      H_Gross_Deko_Inkubator_4_4: -358250720
+      H_Gross_Deko_Inkubator_4_1: -1447948360
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

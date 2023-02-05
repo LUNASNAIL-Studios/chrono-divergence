@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 03c2344b797b6584280c371e889806e8
+guid: ae510452f99c4594b97e1efa549fbeaf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Inkubator_2_0
+      name: H_Deko_Laborwand_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae5c9c959f181c7438d3212b2ac93873
-      internalID: -1390850034
+      spriteID: c24a28bd51791c14faed551b20338d54
+      internalID: -48482576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkubator_2_1
+      name: H_Deko_Laborwand_1
       rect:
         serializedVersion: 2
         x: 512
@@ -139,14 +139,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a68583157bc5d1d4e96f9c7bfff87e69
-      internalID: 813761276
+      spriteID: e099af38be9fb194e88ca04d0b742e3f
+      internalID: -367728261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkubator_2_2
+      name: H_Deko_Laborwand_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8be5e33fed92c94aa428f1442ed9302
+      internalID: -1226709520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: H_Deko_Laborwand_3
       rect:
         serializedVersion: 2
         x: 0
@@ -160,14 +181,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a20eb5ac30c80a040b020e1169e5db7a
-      internalID: 329007599
+      spriteID: 05f705b6896e9d94a8162dcb68497ab7
+      internalID: 1101336956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkubator_2_3
+      name: H_Deko_Laborwand_4
       rect:
         serializedVersion: 2
         x: 512
@@ -181,14 +202,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a98e7d3ee5d5444aad557a2a6a28eea
-      internalID: -1476885441
+      spriteID: ccf2bb0cf18205348a06a4836349a248
+      internalID: -42159947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkubator_2_4
+      name: H_Deko_Laborwand_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d9483a4771c694e9457da548320fd3
+      internalID: -567999789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: H_Deko_Laborwand_6
       rect:
         serializedVersion: 2
         x: 0
@@ -202,14 +244,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfb1266fa2a2d524492cd0b5e17934a8
-      internalID: 1602823289
+      spriteID: efc47458c76944b48afdb8c9f2ba4815
+      internalID: 2144445469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Inkubator_2_5
+      name: H_Deko_Laborwand_7
       rect:
         serializedVersion: 2
         x: 512
@@ -223,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbcada51002f1b547a959274d71168c3
-      internalID: 425564807
+      spriteID: e1d9f8896aa96e8459b78020654d584b
+      internalID: -339403929
       vertices: []
       indices: 
       edges: []
@@ -240,12 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Inkubator_2_1: 813761276
-      Inkubator_2_4: 1602823289
-      Inkubator_2_0: -1390850034
-      Inkubator_2_5: 425564807
-      Inkubator_2_3: -1476885441
-      Inkubator_2_2: 329007599
+      H_Deko_Laborwand_2: -1226709520
+      H_Deko_Laborwand_7: -339403929
+      H_Deko_Laborwand_5: -567999789
+      H_Deko_Laborwand_0: -48482576
+      H_Deko_Laborwand_3: 1101336956
+      H_Deko_Laborwand_1: -367728261
+      H_Deko_Laborwand_4: -42159947
+      H_Deko_Laborwand_6: 2144445469
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
