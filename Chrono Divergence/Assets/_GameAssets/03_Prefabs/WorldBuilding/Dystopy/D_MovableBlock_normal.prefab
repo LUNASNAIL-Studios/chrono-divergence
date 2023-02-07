@@ -216,7 +216,7 @@ MonoBehaviour:
   collisionLayers:
     serializedVersion: 2
     m_Bits: 9
-  idColor: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+  idColor: {r: 0.5764706, g: 0.47843137, b: 0.6039216, a: 1}
   idIcon: {fileID: 0}
   idColorDisplay: {fileID: 6828857388031568003}
   mainSpriteRenderer: {fileID: 0}
@@ -530,7 +530,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 24aaadc3c3c653647861aebec22d4660, type: 3}
-  m_Color: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
+  m_Color: {r: 0.5764706, g: 0.47843137, b: 0.6039216, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
