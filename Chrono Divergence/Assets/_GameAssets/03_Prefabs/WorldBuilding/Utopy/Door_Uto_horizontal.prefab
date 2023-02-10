@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7866079248842027597}
   - component: {fileID: 7866079248842027696}
   - component: {fileID: 7866079248842027697}
-  - component: {fileID: 7866079248842027598}
   m_Layer: 0
   m_Name: Door_Uto_horizontal
   m_TagString: Untagged
@@ -47,12 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba6f66213ff43c28446afe42b2a9246, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 7866079248842027598}
+  anim: {fileID: 0}
   isOpen: 0
   isInverted: 0
-  staysOpen: 0
   isActivatable: 1
   neededIActivators: []
+  doorOpenSprite: {fileID: 21300000, guid: 2cd5f943173ad654da8d7b85f70ee19b, type: 3}
+  doorClosedSprite: {fileID: 21300000, guid: fe969582a1c449146b8a61fddb9d23a8, type: 3}
+  doorSpriteRenderer: {fileID: 7866079248842027696}
+  collider: {fileID: 7866079248842027697}
 --- !u!212 &7866079248842027696
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -131,23 +133,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!95 &7866079248842027598
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7866079248842027699}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e364e84cfbcc6874d8e0386b4d34a5c5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
