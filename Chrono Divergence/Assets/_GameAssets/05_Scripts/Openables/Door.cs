@@ -55,7 +55,15 @@ namespace ChronoDivergence
                 {
                     collider.enabled = isInverted;
                 }
-                doorSpriteRenderer.sprite = doorOpenSprite;
+
+                if (isInverted)
+                {
+                    doorSpriteRenderer.sprite = doorClosedSprite;
+                }
+                else
+                {
+                    doorSpriteRenderer.sprite = doorOpenSprite;
+                }
             }
             else
             {
@@ -65,7 +73,14 @@ namespace ChronoDivergence
                 {
                     collider.enabled = !isInverted;
                 }
-                doorSpriteRenderer.sprite = doorClosedSprite;
+                if (isInverted)
+                {
+                    doorSpriteRenderer.sprite = doorOpenSprite;
+                }
+                else
+                {
+                    doorSpriteRenderer.sprite = doorClosedSprite;
+                }
             }
         }
     }

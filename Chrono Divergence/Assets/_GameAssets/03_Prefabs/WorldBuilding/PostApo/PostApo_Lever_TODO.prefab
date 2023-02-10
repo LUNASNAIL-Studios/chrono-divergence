@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4232902293636103483}
   - component: {fileID: 4232902293636103480}
-  - component: {fileID: 4232902293636103482}
   - component: {fileID: 4232902293636103621}
   m_Layer: 3
   m_Name: PostApo_Lever_TODO
@@ -55,30 +54,11 @@ MonoBehaviour:
       m_Calls: []
   isActivated: 0
   isActivatable: 1
-  anim: {fileID: 4232902293636103482}
   spriteRenderer: {fileID: 4232902294745542169}
-  direction: {x: 0, y: -1}
+  spriteON: {fileID: 21300000, guid: 539ebdb8be8c2ae419f7b5a65f3bf8c6, type: 3}
+  spriteOFF: {fileID: 21300000, guid: 09827fe86f3c23f4d9a258e4cac41ee4, type: 3}
+  direction: {x: -1, y: 0}
   cooldownDuration: 0.4
---- !u!95 &4232902293636103482
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4232902293636103481}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0bc0afbd4b98764499b8aa239f12dae4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &4232902293636103621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -129,7 +109,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4232902294745542174}
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: -0.00000004371139}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
