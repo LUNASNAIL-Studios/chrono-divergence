@@ -12,6 +12,7 @@ namespace ChronoDivergence
         [SerializeField] private Sprite doorOpenSprite;
         [SerializeField] private Sprite doorClosedSprite;
         [SerializeField] private SpriteRenderer doorSpriteRenderer;
+        [SerializeField] private Collider2D collider;
             
         public bool IsOpened()
         {
@@ -50,12 +51,20 @@ namespace ChronoDivergence
             {
                 isOpen = !isInverted;
                 //anim.SetBool("IsOpen", !isInverted);
+                if(collider)
+                {
+                    collider.enabled = isInverted;
+                }
                 doorSpriteRenderer.sprite = doorOpenSprite;
             }
             else
             {
                 isOpen = isInverted;
                 //anim.SetBool("IsOpen", isInverted);
+                if(collider)
+                {
+                    collider.enabled = !isInverted;
+                }
                 doorSpriteRenderer.sprite = doorClosedSprite;
             }
         }
